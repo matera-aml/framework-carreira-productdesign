@@ -1,0 +1,1828 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Framework de Carreira · Product Design · Matera</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ===== Matera brand tokens (cloud.mail.matera.com/brand-guidelines) ===== */
+:root{
+  --matera-purple:#440099;
+  --matera-purple-light:#5310c7;
+  --matera-purple-mid:#4c12aa;
+  --matera-purple-dark:#330072;
+  --matera-green:#6BFF50;
+  --matera-gray-text:#6A6A6A;
+  --matera-gray-100:#EBEBEB;
+  --matera-error:#D92D20;
+  --matera-success:#2D9B52;
+
+  --paper:#FFFFFF;
+  --paper-raised:#FBFAFC;
+  --ink:#1A1225;
+  --ink-soft:var(--matera-gray-text);
+  --line:var(--matera-gray-100);
+  --accent:var(--matera-purple);
+  --danger:var(--matera-error);
+  --danger-bg:#FBE9E7;
+  --shadow:0 1px 2px rgba(68,0,153,0.07);
+  --radius:8px;
+  --radius-pill:999px;
+  --font-display:"Poppins", -apple-system, sans-serif;
+  --font-body:"Poppins", -apple-system, sans-serif;
+
+  /* career-level ladder: light gray -> purple tints -> brand green,
+     following the guideline's own approved contrast pairs */
+  --pd1-bg:var(--matera-gray-100); --pd1-fg:var(--matera-purple);
+  --pd2-bg:var(--matera-purple-light); --pd2-fg:#FFFFFF;
+  --pd3-bg:var(--matera-purple-mid); --pd3-fg:#FFFFFF;
+  --pd4-bg:var(--matera-green); --pd4-fg:var(--matera-purple-dark);
+  --pd1:var(--matera-gray-text);
+  --pd2:var(--matera-purple-light);
+  --pd3:var(--matera-purple-mid);
+  --pd4:var(--matera-purple-dark);
+  --pd1-tint:#F3F3F3; --pd2-tint:#EFE9FA; --pd3-tint:#EAE0F7; --pd4-tint:#EAFCE6;
+}
+:root:not([data-theme="light"]){
+  @media (prefers-color-scheme: dark){
+    --paper:#170F22;
+    --paper-raised:#20152E;
+    --ink:#F1EDF7;
+    --ink-soft:#B7ABC9;
+    --line:#3A2A4C;
+    --accent:var(--matera-green);
+    --danger:#EF7A6E;
+    --danger-bg:#3A2320;
+    --shadow:0 1px 2px rgba(0,0,0,0.5);
+    --pd1-bg:#3A2A4C; --pd1-fg:#D8CBEA;
+    --pd2-bg:var(--matera-purple-light); --pd2-fg:#FFFFFF;
+    --pd3-bg:var(--matera-purple-mid); --pd3-fg:#FFFFFF;
+    --pd4-bg:var(--matera-green); --pd4-fg:var(--matera-purple-dark);
+    --pd1:#B7ABC9; --pd2:var(--matera-purple-light); --pd3:#C79BEF; --pd4:var(--matera-green);
+    --pd1-tint:#241B30; --pd2-tint:#2A1B44; --pd3-tint:#301B4A; --pd4-tint:#16240F;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#170F22;
+  --paper-raised:#20152E;
+  --ink:#F1EDF7;
+  --ink-soft:#B7ABC9;
+  --line:#3A2A4C;
+  --accent:var(--matera-green);
+  --danger:#EF7A6E;
+  --danger-bg:#3A2320;
+  --shadow:0 1px 2px rgba(0,0,0,0.5);
+  --pd1-bg:#3A2A4C; --pd1-fg:#D8CBEA;
+  --pd2-bg:var(--matera-purple-light); --pd2-fg:#FFFFFF;
+  --pd3-bg:var(--matera-purple-mid); --pd3-fg:#FFFFFF;
+  --pd4-bg:var(--matera-green); --pd4-fg:var(--matera-purple-dark);
+  --pd1:#B7ABC9; --pd2:var(--matera-purple-light); --pd3:#C79BEF; --pd4:var(--matera-green);
+    --pd1-tint:#241B30; --pd2-tint:#2A1B44; --pd3-tint:#301B4A; --pd4-tint:#16240F;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--font-body);
+  font-weight:400;
+  font-size:16px; /* Body — 16px Regular 400 */
+  line-height:1.5;
+  min-height:100vh;
+  letter-spacing:0.005em;
+}
+::selection{background:var(--matera-green);color:var(--matera-purple-dark);}
+.wrap{max-width:980px;margin:0 auto;padding:48px 24px 120px;}
+a{color:var(--matera-purple-light);}
+:root[data-theme="dark"] a, :root:not([data-theme="light"]) a{color:var(--matera-green)}
+p{text-align:left;}
+
+/* thin dark nav strip on top — logo + tabs, like a real site nav
+   rather than tabs floating below an unrelated banner */
+.top-nav{background:var(--matera-purple-dark);}
+.top-nav-inner{
+  max-width:980px;margin:0 auto;padding:12px 24px;
+  display:flex;align-items:center;gap:40px;flex-wrap:wrap;
+}
+.top-nav-logo{height:64px;width:auto;display:block;filter:brightness(0) invert(1);flex-shrink:0;}
+
+/* hero banner — a real decorative banner (soft brand gradient +
+   concentric circles) instead of a thin bar; the giant wordmark
+   carries the brand weight, same logic as the reference: small
+   logo up in the nav, oversized brand statement in the banner */
+.hero-banner{
+  position:relative;overflow:hidden;
+  background:linear-gradient(135deg,var(--matera-purple) 0%,var(--matera-purple-dark) 100%);
+  border-bottom:4px solid;
+  border-image:linear-gradient(90deg,var(--matera-purple) 0%,var(--matera-green) 100%) 1;
+}
+.hero-banner::before{
+  content:"";position:absolute;border-radius:50%;pointer-events:none;
+  width:600px;height:600px;top:-340px;right:-140px;
+  border:1px solid rgba(255,255,255,.10);
+}
+.hero-banner::after{
+  content:"";position:absolute;border-radius:50%;pointer-events:none;
+  width:380px;height:380px;bottom:-230px;right:170px;
+  border:1px solid rgba(255,255,255,.07);
+}
+.hero-banner-inner{max-width:980px;margin:0 auto;padding:48px 24px 60px;position:relative;z-index:1;}
+.hero-banner .org{
+  font-size:13px;font-weight:500;letter-spacing:.06em;
+  color:rgba(255,255,255,.65);margin:0 0 28px;
+}
+.hero-content{display:flex;justify-content:space-between;align-items:center;gap:48px;flex-wrap:wrap;}
+.hero-main{display:flex;flex-direction:column;align-items:flex-start;gap:32px;}
+.hero-title{margin:0;line-height:1;}
+.hero-title-sm{
+  display:block;font-family:var(--font-display);font-weight:500;
+  font-size:clamp(18px,2.2vw,24px);color:rgba(255,255,255,.7);
+  margin-bottom:6px;
+}
+.hero-title-lg{
+  display:block;font-family:var(--font-display);font-weight:700;
+  font-size:clamp(52px,8vw,96px);letter-spacing:-0.02em;
+  color:var(--matera-green);line-height:0.95;
+}
+.hero-side{display:flex;flex-direction:column;gap:20px;align-items:flex-start;max-width:280px;}
+.hero-side .sub{color:rgba(255,255,255,.82);font-size:15px;margin:0;font-weight:400;}
+.hero-ladder{display:flex;flex-direction:row;flex-wrap:wrap;gap:8px;}
+
+/* CTA — the single next action, so it gets the brand accent color
+   (green) instead of blending in with the purple banner */
+.hero-cta{
+  background:var(--matera-green);color:var(--matera-purple-dark);
+  padding:15px 26px;font-size:14.5px;font-weight:600;
+  display:inline-flex;align-items:center;gap:9px;
+  box-shadow:0 8px 24px rgba(0,0,0,.18);
+}
+.hero-cta:hover{opacity:.92;}
+.hero-cta span{display:inline-block;transition:transform .15s;}
+.hero-cta:hover span{transform:translateX(4px);}
+.hero-rung{
+  display:flex;align-items:center;gap:7px;
+  padding:8px 14px;border-radius:var(--radius-pill);
+  font-size:12.5px;font-weight:600;color:#fff;
+  background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);
+}
+.hero-rung .dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;background:rgba(255,255,255,.6);}
+.hero-rung.l2 .dot{background:#C79BEF;}
+.hero-rung.l3 .dot{background:#fff;}
+.hero-rung.l4{background:rgba(107,255,80,.18);border-color:rgba(107,255,80,.4);}
+.hero-rung.l4 .dot{background:var(--matera-green);}
+
+/* tabs */
+.tabs{display:flex;gap:28px;align-items:center;flex-wrap:wrap;}
+.tab-btn{
+  font-family:var(--font-body);
+  background:none;border:none;
+  padding:21px 2px;
+  font-size:14px;font-weight:600;
+  color:rgba(255,255,255,.7);
+  cursor:pointer;
+  border-bottom:2px solid transparent;
+  transition:color .15s,border-color .15s;
+}
+.tab-btn:hover{color:#fff;}
+.tab-btn.active{color:var(--matera-green);border-bottom-color:var(--matera-green);}
+.tab-btn[hidden]{display:none;}
+.panel{display:none;}
+.panel.active{display:block;}
+
+/* generic components */
+.card{
+  background:var(--paper-raised);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:32px;
+  margin-bottom:28px;
+  box-shadow:var(--shadow);
+}
+.card h3{
+  font-family:var(--font-display);
+  font-size:22px;font-weight:500;margin:0 0 6px; /* H3 — 22px Medium 500 */
+}
+.card .hint{color:var(--ink-soft);font-size:13px;margin:0 0 22px;line-height:1.5;}
+.section-title{
+  font-family:var(--font-display);
+  font-size:32px;font-weight:500;margin:0 0 6px;line-height:1.2; /* H2 — 32px Medium 500 */
+}
+.section-lede{color:var(--ink-soft);font-size:16px;margin:0 0 32px;max-width:640px;}
+
+/* key signals grid */
+.signal{
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  margin-bottom:16px;
+  overflow:hidden;
+  background:var(--paper-raised);
+}
+.signal > summary{
+  list-style:none;cursor:pointer;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:18px 20px;font-weight:500;font-size:16px;
+}
+.signal > summary::-webkit-details-marker{display:none;}
+.signal > summary .chev{color:var(--ink-soft);font-size:13px;transition:transform .15s;}
+.signal[open] > summary .chev{transform:rotate(90deg);}
+.signal-body{padding:0 20px 24px;}
+.lvl-grid{display:grid;grid-template-columns:1fr;gap:16px;}
+@media(min-width:720px){.lvl-grid{grid-template-columns:repeat(4,1fr);}}
+.lvl-cell{border-left:3px solid var(--line);padding:10px 14px;font-size:13px;}
+.lvl-cell .lvl-label{font-size:10px;font-weight:500;letter-spacing:.08em;margin-bottom:6px;} /* Label — 10px, tracked 0.08em, Medium */
+.lvl-cell.l1{border-color:var(--pd1);}
+.lvl-cell.l1 .lvl-label{color:var(--pd1);}
+.lvl-cell.l2{border-color:var(--pd2);}
+.lvl-cell.l2 .lvl-label{color:var(--pd2);}
+.lvl-cell.l3{border-color:var(--pd3);}
+.lvl-cell.l3 .lvl-label{color:var(--pd3);}
+.lvl-cell.l4{border-color:var(--pd4);}
+.lvl-cell.l4 .lvl-label{color:var(--pd4);}
+.alert-box{
+  margin-top:16px;background:var(--danger-bg);border-radius:var(--radius);
+  padding:18px 20px;font-size:13px;
+}
+.alert-box .alert-title{font-weight:500;color:var(--danger);font-size:11px;letter-spacing:.05em;margin-bottom:8px;}
+.alert-box ul{margin:0;padding-left:18px;}
+.alert-box li{margin-bottom:4px;}
+
+/* full matrix accordions */
+.matrix-cat{border:1px solid var(--line);border-radius:var(--radius);margin-bottom:12px;background:var(--paper-raised);}
+.matrix-cat>summary{list-style:none;cursor:pointer;padding:16px 20px;font-weight:500;display:flex;justify-content:space-between;align-items:center;}
+.matrix-cat>summary::-webkit-details-marker{display:none;}
+.matrix-cat>summary .chev{color:var(--ink-soft);font-size:12px;transition:transform .15s;}
+.matrix-cat[open]>summary .chev{transform:rotate(90deg);}
+table.matrix{width:100%;border-collapse:collapse;font-size:13px;margin:0 0 14px;}
+table.matrix th, table.matrix td{border:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top;}
+table.matrix th{background:var(--paper);font-size:10px;letter-spacing:.06em;font-weight:500;color:var(--ink-soft);}
+table.matrix td:first-child{font-weight:500;width:16%;}
+.matrix-scroll{overflow-x:auto;padding:0 20px 20px;}
+
+/* buttons/inputs — Primário / Secundário / Outline / Disabled, Medium 13px */
+button{font-family:var(--font-body);}
+.btn{
+  background:var(--matera-purple);color:#fff;
+  border:none;border-radius:var(--radius);
+  padding:12px 20px;font-size:13px;font-weight:500;cursor:pointer;
+  transition:opacity .12s;
+}
+.btn:hover{opacity:.9;}
+.btn.secondary{background:var(--matera-gray-100);border:none;color:var(--matera-purple-dark);}
+:root[data-theme="dark"] .btn.secondary, :root:not([data-theme="light"]) .btn.secondary{background:var(--line);color:var(--ink);}
+.btn.outline{background:none;border:1px solid var(--matera-purple);color:var(--matera-purple);}
+.btn.danger{background:none;border:1px solid var(--danger);color:var(--danger);}
+.btn:disabled{opacity:.4;cursor:not-allowed;}
+input[type=text],input[type=date],select,textarea{
+  font-family:var(--font-body);
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:12px 14px;font-size:14px;color:var(--ink);
+  width:100%;
+}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--matera-purple-light);outline-offset:1px;}
+textarea{resize:vertical;min-height:64px;}
+label.field{display:block;font-size:10px;font-weight:500;letter-spacing:.08em;color:var(--ink-soft);margin-bottom:6px;}
+.field-row{margin-bottom:20px;}
+.grid2{display:grid;grid-template-columns:1fr;gap:20px;}
+@media(min-width:640px){.grid2{grid-template-columns:1fr 1fr;}}
+
+/* level chips selector */
+.chiprow{display:flex;gap:8px;flex-wrap:wrap;}
+.chip{
+  border:1px solid var(--line);border-radius:var(--radius-pill);
+  padding:7px 14px;font-size:13px;font-weight:500;cursor:pointer;
+  background:var(--paper);color:var(--ink-soft);
+  transition:background .12s,color .12s,border-color .12s;
+}
+.chip.sel1.is-selected{background:var(--pd1-bg);border-color:var(--pd1-bg);color:var(--pd1-fg);}
+.chip.sel2.is-selected{background:var(--pd2-bg);border-color:var(--pd2-bg);color:var(--pd2-fg);}
+.chip.sel3.is-selected{background:var(--pd3-bg);border-color:var(--pd3-bg);color:var(--pd3-fg);}
+.chip.sel4.is-selected{background:var(--pd4-bg);border-color:var(--pd4-bg);color:var(--pd4-fg);}
+.dim-desc{font-size:13px;color:var(--ink-soft);margin-top:8px;min-height:18px;}
+
+/* question wizard */
+.progress-track{height:4px;background:var(--line);border-radius:2px;margin-bottom:18px;overflow:hidden;}
+.progress-fill{height:100%;background:var(--matera-purple);transition:width .2s;}
+:root[data-theme="dark"] .progress-fill, :root:not([data-theme="light"]) .progress-fill{background:var(--matera-green);}
+.step-label{font-size:10px;font-weight:500;letter-spacing:.08em;color:var(--ink-soft);margin-bottom:10px;}
+.option-card{
+  display:block;width:100%;text-align:left;
+  border:1px solid var(--line);border-radius:var(--radius);
+  padding:14px 16px;margin-bottom:10px;
+  background:var(--paper);cursor:pointer;
+  font-family:var(--font-body);font-size:14.5px;color:var(--ink);
+  transition:border-color .12s,background .12s;
+}
+.option-card:hover{border-color:var(--matera-purple-light);background:var(--paper-raised);}
+.option-card .opt-lvl{display:block;font-size:10px;font-weight:500;letter-spacing:.07em;color:var(--ink-soft);margin-bottom:5px;}
+
+/* results — 8-row dot track model */
+.ruler-legend{display:grid;grid-template-columns:minmax(110px,160px) 1fr 46px;gap:12px;margin-bottom:6px;}
+.legend-quarters{display:grid;grid-template-columns:repeat(4,1fr);font-size:10px;font-weight:500;letter-spacing:.06em;color:var(--ink-soft);text-align:center;}
+.ruler-rows{display:flex;flex-direction:column;}
+.ruler-row{
+  display:grid;grid-template-columns:minmax(110px,160px) 1fr 46px;gap:12px;
+  align-items:center;padding:11px 8px;border-radius:6px;cursor:pointer;
+}
+.ruler-row:hover{background:var(--paper);}
+.ruler-row-label{font-size:13.5px;font-weight:500;}
+.ruler-row-track{position:relative;height:10px;border-radius:6px;overflow:visible;display:flex;}
+.track-seg{flex:1;}
+.track-seg:first-child{border-radius:6px 0 0 6px;}
+.track-seg:last-child{border-radius:0 6px 6px 0;}
+.track-seg.l1{background:var(--pd1-tint);}
+.track-seg.l2{background:var(--pd2-tint);}
+.track-seg.l3{background:var(--pd3-tint);}
+.track-seg.l4{background:var(--pd4-tint);}
+.track-dot{position:absolute;top:50%;width:14px;height:14px;border-radius:50%;transform:translate(-50%,-50%);border:2px solid var(--paper-raised);box-shadow:0 0 0 1px var(--line);}
+.track-dot.l1{background:var(--pd1);}
+.track-dot.l2{background:var(--pd2);}
+.track-dot.l3{background:var(--pd3);}
+.track-dot.l4{background:var(--pd4);}
+.ruler-row-value{font-size:11px;font-weight:600;color:var(--ink-soft);text-align:right;letter-spacing:.03em;}
+@media(max-width:560px){
+  .ruler-legend, .ruler-row{grid-template-columns:96px 1fr 40px;gap:8px;}
+  .ruler-row-label{font-size:12.5px;}
+}
+
+/* evidence / gap lists */
+.item-row{display:flex;gap:10px;align-items:flex-start;margin-bottom:10px;}
+.item-row .txt{flex:1;font-size:13.5px;padding:10px 12px;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);}
+.item-row button{flex-shrink:0;}
+.add-row{display:flex;gap:10px;margin-top:10px;}
+.add-row input{flex:1;}
+
+/* gap form — 3 campos (o quê / como / prazo) em vez de um texto solto */
+.gap-form{margin-top:6px;}
+.gap-item{display:flex;gap:10px;align-items:flex-start;margin-bottom:10px;}
+.gap-item-main{flex:1;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:12px 14px;}
+.gap-item-title{font-size:13.5px;font-weight:600;margin-bottom:4px;}
+.gap-item-action{font-size:12.5px;color:var(--ink-soft);}
+.gap-item-deadline{
+  display:inline-block;margin-top:6px;font-size:10.5px;font-weight:600;
+  letter-spacing:.04em;color:var(--matera-purple);background:var(--pd1-bg);
+  padding:3px 9px;border-radius:var(--radius-pill);
+}
+:root[data-theme="dark"] .gap-item-deadline, :root:not([data-theme="light"]) .gap-item-deadline{color:var(--matera-green);}
+
+/* PDI download card — visually the "final action" of Meu mapa */
+.pdi-card{background:var(--pd1-tint);border-color:var(--matera-purple-light);}
+:root[data-theme="dark"] .pdi-card, :root:not([data-theme="light"]) .pdi-card{background:var(--paper-raised);border-color:var(--matera-green);}
+.pdi-actions{display:flex;gap:10px;flex-wrap:wrap;}
+.qr-link{display:inline-flex;align-items:center;gap:8px;text-decoration:none;}
+.qr-badge{
+  display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;
+  width:18px;height:18px;border-radius:5px;
+  background:#1B1D3B;color:#fff;font-size:9px;font-weight:700;letter-spacing:0;
+}
+
+/* pill / badges */
+.badge{display:inline-block;font-size:10px;font-weight:500;padding:4px 10px;border-radius:var(--radius-pill);letter-spacing:.05em;}
+.badge.l1{background:var(--pd1-bg);color:var(--pd1-fg);}
+.badge.l2{background:var(--pd2-bg);color:var(--pd2-fg);}
+.badge.l3{background:var(--pd3-bg);color:var(--pd3-fg);}
+.badge.l4{background:var(--pd4-bg);color:var(--pd4-fg);}
+.badge.stale{background:var(--danger-bg);color:var(--danger);}
+
+/* management table */
+.mtable{width:100%;border-collapse:collapse;font-size:13.5px;}
+.mtable th{text-align:left;font-size:11.5px;text-transform:uppercase;letter-spacing:.03em;color:var(--ink-soft);padding:10px 12px;border-bottom:1px solid var(--line);}
+.mtable td{padding:13px 12px;border-bottom:1px solid var(--line);vertical-align:middle;}
+.mtable tr:hover td{background:var(--paper);}
+.name-cell{font-weight:600;}
+.muted{color:var(--ink-soft);}
+
+/* modal */
+.overlay{position:fixed;inset:0;background:rgba(10,10,8,0.45);display:none;align-items:center;justify-content:center;z-index:50;padding:20px;}
+.overlay.open{display:flex;}
+.modal{background:var(--paper-raised);border-radius:var(--radius);max-width:560px;width:100%;max-height:88vh;overflow-y:auto;padding:30px;border:1px solid var(--line);}
+.modal h3{font-family:var(--font-display);font-size:19px;margin:0 0 4px;}
+.modal .muted{margin-bottom:16px;}
+.modal-close{float:right;background:none;border:none;color:var(--ink-soft);font-size:20px;cursor:pointer;line-height:1;}
+
+.notice{
+  border:1px solid var(--line);border-left:3px solid var(--accent);
+  padding:14px 18px;border-radius:var(--radius);font-size:13.5px;color:var(--ink-soft);
+  margin-bottom:24px;background:var(--paper-raised);
+}
+.status-line{font-size:12.5px;color:var(--ink-soft);margin-top:10px;min-height:16px;}
+.status-line.ok{color:var(--matera-success);}
+.status-line.err{color:var(--danger);}
+.empty{color:var(--ink-soft);font-size:13.5px;padding:20px 0;}
+footer{margin-top:64px;padding-top:24px;border-top:1px solid var(--line);color:var(--ink-soft);font-size:12px;}
+
+/* step nav — orients the person inside "Meu mapa" once results appear */
+.step-nav{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px;padding:12px;background:var(--paper-raised);border:1px solid var(--line);border-radius:var(--radius);}
+.step-nav a{
+  display:flex;align-items:center;gap:7px;
+  text-decoration:none;color:var(--ink);
+  font-size:12.5px;font-weight:500;
+  padding:7px 12px;border-radius:var(--radius-pill);
+  flex:1;min-width:140px;
+  border:1px solid transparent;
+}
+.step-nav a:hover{background:var(--paper);border-color:var(--line);}
+.step-nav a .stepnum{
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  width:18px;height:18px;border-radius:50%;
+  background:var(--matera-purple);color:#fff;
+  font-size:10px;font-weight:600;
+}
+:root[data-theme="dark"] .step-nav a .stepnum, :root:not([data-theme="light"]) .step-nav a .stepnum{background:var(--matera-green);color:var(--matera-purple-dark);}
+
+/* eyebrow above each section card — names the step + what it's for */
+.section-eyebrow{
+  font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--matera-purple);margin:0 0 8px;display:flex;align-items:center;gap:7px;
+  scroll-margin-top:16px;
+}
+:root[data-theme="dark"] .section-eyebrow, :root:not([data-theme="light"]) .section-eyebrow{color:var(--matera-green);}
+.section-eyebrow .stepnum{
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  width:20px;height:20px;border-radius:50%;
+  background:var(--matera-purple);color:#fff;font-size:11px;font-weight:600;letter-spacing:0;text-transform:none;
+}
+:root[data-theme="dark"] .section-eyebrow .stepnum, :root:not([data-theme="light"]) .section-eyebrow .stepnum{background:var(--matera-green);color:var(--matera-purple-dark);}
+.section-purpose{color:var(--ink-soft);font-size:12.5px;margin:0 0 18px;line-height:1.5;}
+.matrix-group-label{
+  font-family:var(--font-display);font-size:16px;font-weight:600;
+  margin:40px 0 6px;color:var(--matera-purple);
+}
+.matrix-group-label:first-child{margin-top:0;}
+:root[data-theme="dark"] .matrix-group-label, :root:not([data-theme="light"]) .matrix-group-label{color:var(--matera-green);}
+.matrix-group-lede{color:var(--ink-soft);font-size:13px;margin:0 0 18px;}
+.ruler-group-label{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);margin:0 0 8px;}
+.profile-chips{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 14px;}
+
+@media (max-width:600px){
+  .wrap{padding:32px 16px 80px;}
+  .hero-content{flex-direction:column;align-items:flex-start;}
+  table.matrix{font-size:12px;}
+  .hero-banner-inner{padding:32px 16px 40px;}
+  .hero-side{max-width:100%;}
+  .top-nav-inner{padding:0 16px;gap:24px;}
+  .top-nav-logo{height:40px;}
+  .tab-btn{padding:16px 0;}
+}
+</style>
+</head>
+<body>
+<nav class="top-nav">
+  <div class="top-nav-inner">
+    <img class="top-nav-logo" src="data:image/png;base64,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+4ksI38lBGAkGqbTb5bx68uH2K/UwgGO1Gh8csJmzxqXNngy0foWdT0dTeUCBXSyjLrp9L6muz/HfsDEwEEH5f531gFd2ExQ+cWZamPMc3U9dZJXQgBGpmE6/X4Pu10Jmg3K/b+mHn8UxraD0L87vv464yQOUXZ+eR8RB3UAD2Cpnz4/22cxnt971Na7+WYx2/5PHPh5Jzj4b12M+UbU9XelXdfP/DrpPEajbItYM1P0vf+bh94bPpmhalN2Jtwc+PJRXUv/9eeff576HAAAOFOm0QEASCNsAgCQRtgEACCNsAkAQBphEwCANMImAABphE0AANIImwAApBE2AQBII2wCAJBG2AQAII2wCQBAGmETAIA0wiYAAGmETQAA0gibAACkETYBAEgjbAIAkEbYBAAgjbAJAEAaYRMAgDTCJgAAaYRNAADSCJsAAKQRNgEASCNsAgCQRtgEACCNsAkAQBphEwCANMImAABphE0AANIImwAApBE2AQBII2wCAJBG2AQAII2wCQBAGmETAIA0wiYAAGmETQAA0gibAACkETYBAEgjbAIAkEbYBAAgjbAJAEAaYRMAgDTCJgAAaYRNAADSCJsAAKQRNgEASCNsAgCQRtgEACCNsAkAQBphEwCANMImAABphE0AANIImwAApBE2AQBII2wCAJBG2AQAII2wCQBAGmETAIA0wiYAAGmETQAA0gibAACkETYBAEgjbAIAkEbYBAAgjbAJAEAaYRMAgDTCJgAAaYRNAADSCJsAAKQRNgEASCNsAgCQRtgEACCNsAkAQBphEwCANMImAABphE0AANIImwAApBE2AQBII2wCAJBG2AQAII2wCQBAGmETAIA0wiYAAGmETQAA0gibAACkETYBAEgjbAIAkEbYBAAgjbAJAEAaYRMAgDTCJgAAaYRNAADSCJsAAKQRNgEASCNsAgCQRtgEACCNsAkAQBphEwCANMImAABphE0AANIImwAApBE2AQBII2wCAJDm/wGIWaB4qDZqpgAAAABJRU5ErkJggg==" alt="Matera">
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="regua">A régua</button>
+      <button class="tab-btn" data-tab="meumapa">Meu mapa</button>
+    </div>
+  </div>
+</nav>
+<header class="hero-banner">
+  <div class="hero-banner-inner">
+    <p class="org">Product Design · Career Framework</p>
+    <div class="hero-content">
+      <div class="hero-main">
+        <h1 class="hero-title">
+          <span class="hero-title-sm">Framework de</span>
+          <span class="hero-title-lg">Carreira</span>
+        </h1>
+        <button class="btn hero-cta" id="heroCtaBtn">Começar meu mapa de carreira <span aria-hidden="true">→</span></button>
+      </div>
+      <div class="hero-side">
+        <p class="sub">Uma régua viva para entender seu nível atual, comparar sua atuação com o que a Matera espera e acompanhar sua evolução ao longo do tempo.</p>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="wrap">
+
+  <!-- ===================== TAB: A REGUA ===================== -->
+  <div class="panel active" id="panel-regua">
+    <p class="section-eyebrow"><span class="stepnum">1</span>Referência 1 de 3 · Visão geral comportamental</p>
+    <h2 class="section-title">Os 8 pilares comportamentais</h2>
+    <p class="section-lede">Uma leitura rápida do padrão comportamental — como você atua, não o quanto domina tecnicamente cada ferramenta. Para o lado técnico (craft, pesquisa, dados, tecnologia), veja a matriz completa mais abaixo.</p>
+    <div id="signalsContainer"></div>
+
+    <p class="section-eyebrow" style="margin-top:64px;"><span class="stepnum">2</span>Referência 2 de 3 · Pontos de atenção</p>
+    <h2 class="section-title">Sinais de alerta</h2>
+    <p class="section-lede">Sinais de estagnação ou regressão num nível — separados de propósito da régua acima, para não misturar "o que se espera" com "o que preocupa". Escolha um nível para ver os sinais associados a ele.</p>
+    <div class="card">
+      <select id="selAlertLevel" style="max-width:280px;margin-bottom:16px;">
+        <option value="">Selecione um nível</option>
+        <option value="PD1">PD1 · Júnior</option>
+        <option value="PD2">PD2 · Pleno</option>
+        <option value="PD3">PD3 · Sênior</option>
+        <option value="PD4">PD4 · Especialista</option>
+      </select>
+      <div id="alertViewer"><p class="empty">Nenhum nível selecionado.</p></div>
+    </div>
+
+    <p class="section-eyebrow" style="margin-top:64px;"><span class="stepnum">3</span>Referência 3 de 3 · Biblioteca de evidências</p>
+    <h2 class="section-title">Matriz completa de competências</h2>
+    <p class="section-lede">Use isto como biblioteca de referência para encontrar evidências — não como lista para "zerar". Ninguém precisa estar no nível máximo em todos os itens; o nível é o padrão consistente, não a média.</p>
+    <div id="matrixContainer"></div>
+  </div>
+
+  <!-- ===================== TAB: MEU MAPA ===================== -->
+  <div class="panel" id="panel-meumapa">
+    <h2 class="section-title">Meu mapa de carreira</h2>
+    <p class="section-lede">Responda o que reflete melhor a sua atuação no dia a dia. No final, você vê — de um jeito simples e visual — onde você está em cada critério.</p>
+    <div id="meuMapaRoot"></div>
+  </div>
+
+  <footer>Matera · Product Design Career Framework · V2 (documento vivo) · <span id="lastMineUpdate"></span></footer>
+</div>
+<div id="managementMount"></div>
+
+<script>
+/* ============================================================
+   DATA: 8 key signals (condensed from p.3), unified taxonomy
+   ============================================================ */
+const LEVELS = ["PD1","PD2","PD3","PD4"];
+const LEVEL_LABEL = {PD1:"PD1 · Júnior", PD2:"PD2 · Pleno", PD3:"PD3 · Sênior", PD4:"PD4 · Especialista"};
+
+const SIGNALS = [
+  {id:"autonomia", nome:"Autonomia", pd1:"Executa com orientação.", pd2:"Trabalha com autonomia.", pd3:"Define caminhos.", pd4:"Orienta e escala."},
+  {id:"complexidade", nome:"Complexidade dos problemas", pd1:"Problemas conhecidos.", pd2:"Média complexidade.", pd3:"Problemas complexos.", pd4:"Problemas sistêmicos."},
+  {id:"escopo", nome:"Escopo", pd1:"Tarefa / feature.", pd2:"Fluxo / problema.", pd3:"Produto / domínio.", pd4:"Múltiplos contextos."},
+  {id:"cliente", nome:"Cliente", pd1:"Considera.", pd2:"Investiga.", pd3:"Defende.", pd4:"Influencia decisões."},
+  {id:"produto", nome:"Produto", pd1:"Entende.", pd2:"Contribui.", pd3:"Influencia.", pd4:"Direciona."},
+  {id:"colaboracao", nome:"Colaboração", pd1:"Participa.", pd2:"Colabora.", pd3:"Influencia o time.", pd4:"Eleva o time."},
+  {id:"design", nome:"Design", pd1:"Executa.", pd2:"Resolve.", pd3:"Lidera soluções.", pd4:"Define padrões."},
+  {id:"impacto", nome:"Impacto", pd1:"Entrega.", pd2:"Resolve.", pd3:"Gera resultado.", pd4:"Amplia a capacidade de Design."},
+];
+
+/* Red flags — authored to mirror the "what's missing for the next level"
+   logic, but pointing the opposite direction: signs of stagnation or
+   regression AT a level. Used for self-reflection, never shown as a
+   score. */
+const ALERTAS = {
+  PD1: [
+    "Depende de orientação até em tarefas já feitas várias vezes antes.",
+    "Evita pedir ajuda mesmo travado, ou pede ajuda para decisões pequenas repetidamente.",
+    "Entrega o caminho principal mas ignora consistentemente estados de erro e exceção.",
+    "Não consegue explicar o motivo das próprias escolhas quando perguntado.",
+  ],
+  PD2: [
+    "Conduz o próprio trabalho mas raramente investiga o problema antes de desenhar.",
+    "Entrega fluxos completos, mas sem considerar como a solução se comporta fora do caso feliz.",
+    "Evita dar ou receber feedback direto, ou o feedback recebido não muda o trabalho seguinte.",
+    "Segue o Design System sem nunca identificar lacunas, mesmo quando elas existem.",
+    "Precisa de supervisão constante para priorizar o próprio trabalho.",
+  ],
+  PD3: [
+    "Escopo e complexidade do trabalho não cresceram nos últimos ciclos, mesmo com oportunidade.",
+    "Rediz caminhos técnicos ou de produto, mas não influencia decisões fora do próprio fluxo.",
+    "Evita ambiguidade em vez de estruturar problemas pouco definidos.",
+    "Não é procurado por outros designers como referência em nenhum tema.",
+    "Toma decisões sozinho em temas que afetam múltiplos times, sem alinhar stakeholders.",
+  ],
+  PD4: [
+    "Impacto continua concentrado nas próprias entregas, não na capacidade de outros designers.",
+    "Não contribui para padrões, processos ou Design System além do próprio trabalho.",
+    "Evita mentoria estruturada ou definição de critérios que outros usem.",
+    "Visão estratégica não se traduz em decisões concretas de produto ou processo.",
+  ],
+};
+
+const ALERT_INTRO = {
+  PD1: "Sinais de que a atuação está abaixo do esperado mesmo para um PD1 — vale trazer isso para uma conversa com seu gestor.",
+  PD2: "Sinais de estagnação num padrão de PD1, mesmo já tendo tempo de casa como Pleno.",
+  PD3: "Sinais de que o escopo parou de crescer ou a influência não está se traduzindo em resultado.",
+  PD4: "Sinais de que o impacto ainda não se estende além das próprias entregas.",
+};
+
+/* ============================================================
+   DATA: full competency matrix (soft + hard skills), transcribed
+   from the original PDF, grouped by category for the reference
+   accordion. Not meant to be worked through linearly.
+   ============================================================ */
+const MATRIX = [
+  {cat:"Autonomia", group:"soft", rows:[
+    {n:"Execução do trabalho", pd1:"Executa atividades conhecidas com orientação e busca apoio ao encontrar obstáculos.", pd2:"Conduz o próprio trabalho de ponta a ponta, buscando direcionamento para decisões de maior impacto.", pd3:"Define caminhos para problemas complexos e toma decisões com pouca necessidade de direcionamento.", pd4:"Cria clareza em problemas ambíguos e orienta outros designers na condução do trabalho."},
+    {n:"Busca de ajuda", pd1:"Sabe identificar quando precisa de ajuda e pede apoio no momento certo.", pd2:"Resolve a maior parte dos bloqueios sozinho, escalando apenas o que exige alinhamento maior.", pd3:"Antecipa riscos antes que se tornem bloqueios e raramente precisa escalar problemas.", pd4:"É procurado por outros designers como referência para destravar problemas difíceis."},
+    {n:"Gestão do próprio trabalho", pd1:"Organiza suas tarefas do dia a dia com apoio de um par ou gestor.", pd2:"Planeja e prioriza seu próprio trabalho sem necessidade de supervisão constante.", pd3:"Gerencia múltiplas frentes simultâneas, ajustando prioridades conforme o contexto muda.", pd4:"Ajuda o time a organizar prioridades entre múltiplos projetos e contextos."},
+    {n:"Tomada de decisão", pd1:"Toma decisões pequenas dentro de tarefas bem definidas.", pd2:"Toma decisões de design dentro do seu fluxo de trabalho, justificando as escolhas.", pd3:"Toma decisões que afetam múltiplas equipes ou produtos, avaliando trade-offs com clareza.", pd4:"Estabelece critérios de decisão que outros designers passam a usar."},
+    {n:"Resposta à ambiguidade", pd1:"Precisa de contexto e escopo claros para iniciar o trabalho.", pd2:"Consegue avançar mesmo quando parte do escopo ainda está sendo definida.", pd3:"Estrutura problemas pouco definidos e propõe um caminho antes de qualquer solução existir.", pd4:"Transforma ambiguidade estratégica em direção prática para múltiplos times."},
+  ]},
+  {cat:"Discovery & entendimento do problema", group:"soft", rows:[
+    {n:"Entendimento do problema", pd1:"Entende o problema a partir do que é explicado pelo time.", pd2:"Investiga o problema por conta própria antes de propor soluções.", pd3:"Questiona premissas do problema e identifica causas que não estavam explícitas.", pd4:"Redefine como o time entende e enquadra problemas complexos."},
+    {n:"Pesquisa com usuários", pd1:"Participa de sessões de pesquisa conduzidas por outra pessoa.", pd2:"Planeja e conduz pesquisas simples com apoio pontual.", pd3:"Escolhe o método certo para cada tipo de problema e conduz pesquisas complexas.", pd4:"Eleva a qualidade da prática de pesquisa do time e forma outros designers nisso."},
+    {n:"Uso de dados no discovery", pd1:"Consulta dados já levantados por outras pessoas para entender o contexto.", pd2:"Busca dados quantitativos e qualitativos relevantes para o problema em questão.", pd3:"Cruza diferentes fontes de dados para validar hipóteses antes de investir em solução.", pd4:"Define quais dados o time deveria acompanhar para tomar melhores decisões."},
+    {n:"Formulação de hipóteses", pd1:"Ajuda a testar hipóteses já formuladas pelo time.", pd2:"Formula hipóteses testáveis a partir dos achados de pesquisa.", pd3:"Prioriza hipóteses por impacto e risco, definindo o que testar primeiro.", pd4:"Orienta o time sobre como formular e priorizar hipóteses de forma consistente."},
+    {n:"Síntese de achados", pd1:"Organiza notas e registros de pesquisa de forma clara.", pd2:"Sintetiza achados de pesquisa em insights que orientam decisões de design.", pd3:"Conecta achados de diferentes pesquisas em uma visão coerente do problema.", pd4:"Cria formas melhores de o time sintetizar e comunicar achados de pesquisa."},
+  ]},
+  {cat:"Solução & execução", group:"soft", rows:[
+    {n:"Geração de alternativas", pd1:"Explora variações de uma solução já direcionada.", pd2:"Gera múltiplas alternativas de solução e argumenta pelos trade-offs entre elas.", pd3:"Lidera a exploração de soluções para problemas com múltiplas variáveis.", pd4:"Define como o time deveria abordar a geração de soluções em problemas complexos."},
+    {n:"Qualidade da solução final", pd1:"Entrega soluções funcionais para problemas bem definidos.", pd2:"Entrega soluções consistentes, cobrindo os principais casos de uso.", pd3:"Entrega soluções robustas que consideram exceções, escala e manutenção futura.", pd4:"Estabelece o padrão de qualidade que o time usa como referência."},
+    {n:"Prototipação e validação", pd1:"Prototipa telas com apoio para validar ideias simples.", pd2:"Prototipa e testa soluções antes de finalizar o design.", pd3:"Define o nível de fidelidade certo para cada tipo de validação.", pd4:"Cria formas mais eficientes do time prototipar e validar soluções."},
+    {n:"Estados e exceções", pd1:"Desenha o caminho principal (happy path) de uma funcionalidade.", pd2:"Desenha estados de erro, vazio e carregamento além do caminho principal.", pd3:"Antecipa exceções de sistemas complexos e integrações antes de acontecerem.", pd4:"Cria diretrizes para o time tratar estados e exceções de forma consistente."},
+    {n:"Uso do Design System", pd1:"Utiliza componentes do Design System nas suas entregas.", pd2:"Aplica o Design System com consistência e propõe pequenos ajustes quando necessário.", pd3:"Identifica lacunas no Design System e propõe evoluções com base em casos reais.", pd4:"Contribui diretamente para a evolução do Design System da Matera."},
+  ]},
+  {cat:"Produto & negócio", group:"soft", rows:[
+    {n:"Entendimento do produto", pd1:"Entende a funcionalidade em que está trabalhando.", pd2:"Entende como sua entrega se conecta com o restante do produto.", pd3:"Entende como decisões de design impactam métricas e objetivos do produto.", pd4:"Ajuda a definir a direção de produto a partir de uma visão de design."},
+    {n:"Priorização", pd1:"Segue as prioridades definidas pelo time.", pd2:"Contribui com argumentos de design para discussões de priorização.", pd3:"Influencia priorização com base em impacto para o usuário e para o negócio.", pd4:"Direciona decisões de priorização em múltiplos projetos ou squads."},
+    {n:"Contexto de negócio", pd1:"Reconhece que existem regras de negócio envolvidas no que está desenhando.", pd2:"Considera regras de negócio e restrições ao propor soluções.", pd3:"Equilibra necessidades do usuário com viabilidade de negócio em decisões complexas.", pd4:"Traz uma visão de negócio que influencia decisões de produto em nível estratégico."},
+    {n:"Métricas", pd1:"Sabe quais métricas o time acompanha.", pd2:"Usa métricas para avaliar o impacto do que entrega.", pd3:"Propõe métricas novas para medir o sucesso de soluções.", pd4:"Define como o design deveria ser medido em diferentes produtos."},
+    {n:"Visão estratégica", pd1:"Foca na entrega da tarefa atual.", pd2:"Entende como sua tarefa se conecta ao objetivo do time no trimestre.", pd3:"Conecta o trabalho do dia a dia a objetivos de médio e longo prazo do produto.", pd4:"Contribui para a definição da estratégia de design de um domínio ou produto."},
+  ]},
+  {cat:"Cliente", group:"soft", rows:[
+    {n:"Consideração do cliente", pd1:"Considera o cliente a partir de informações já levantadas pelo time.", pd2:"Busca ativamente entender as necessidades reais do cliente antes de desenhar.", pd3:"Defende a perspectiva do cliente em discussões com múltiplos stakeholders.", pd4:"Influencia decisões estratégicas a partir de uma visão profunda do cliente."},
+    {n:"Contato direto com cliente", pd1:"Participa de sessões com cliente quando convidado.", pd2:"Conduz conversas com clientes para entender contexto e problemas.", pd3:"Estrutura e conduz pesquisas com clientes em temas complexos ou sensíveis.", pd4:"Define como o time deveria se relacionar com clientes ao longo do processo de design."},
+    {n:"Tradução de necessidades", pd1:"Traduz pedidos simples do cliente em telas.", pd2:"Traduz necessidades do cliente em soluções que resolvem o problema de fato.", pd3:"Identifica necessidades que o próprio cliente não conseguiu verbalizar.", pd4:"Cria formas do time captar necessidades de cliente de maneira mais precisa."},
+    {n:"Múltiplos perfis de usuário", pd1:"Desenha para um perfil de usuário já definido.", pd2:"Considera diferentes perfis de usuário dentro de uma mesma jornada.", pd3:"Equilibra necessidades conflitantes entre diferentes perfis e stakeholders.", pd4:"Define a estratégia de design para múltiplos perfis em produtos complexos."},
+    {n:"Suporte e pós-entrega", pd1:"Corrige pontos simples identificados após a entrega.", pd2:"Acompanha como a solução se comporta após a entrega e ajusta o que for necessário.", pd3:"Usa feedback de suporte e operação para antecipar problemas em novas soluções.", pd4:"Cria processos para que o time aprenda continuamente com o pós-entrega."},
+  ]},
+  {cat:"Colaboração & influência", group:"soft", rows:[
+    {n:"Trabalho com o time", pd1:"Participa ativamente das dinâmicas do time.", pd2:"Colabora de forma fluida com PM, tech lead e outros papéis do time.", pd3:"Influencia decisões do time mesmo fora da sua área direta de atuação.", pd4:"Eleva a forma como múltiplos times colaboram com Design."},
+    {n:"Comunicação de decisões", pd1:"Explica suas escolhas de design quando perguntado.", pd2:"Comunica decisões de design de forma clara para o time.", pd3:"Comunica decisões complexas de forma simples para públicos variados.", pd4:"Define como Design comunica decisões para a liderança e outras áreas."},
+    {n:"Feedback", pd1:"Recebe feedback e ajusta seu trabalho.", pd2:"Dá e recebe feedback de forma direta e construtiva.", pd3:"Cria espaço para que outros deem e recebam feedback com mais qualidade.", pd4:"É referência em feedback, ajudando a elevar o padrão do time."},
+    {n:"Mentoria", pd1:"Aprende com pares mais experientes.", pd2:"Ajuda designers mais novos em dúvidas pontuais do dia a dia.", pd3:"Mentora outros designers de forma estruturada.", pd4:"Forma outros designers e ajuda a desenvolver a próxima geração de líderes técnicos."},
+    {n:"Negociação e alinhamento", pd1:"Segue os alinhamentos já definidos pelo time.", pd2:"Negocia prazos e escopo de forma direta com o time.", pd3:"Alinha expectativas entre múltiplos stakeholders com interesses diferentes.", pd4:"Constrói consenso em decisões que afetam múltiplos times ou produtos."},
+  ]},
+  {cat:"Complexidade", group:"soft", rows:[
+    {n:"Tamanho dos problemas", pd1:"Resolve tarefas e features pontuais.", pd2:"Resolve fluxos completos e problemas de média complexidade.", pd3:"Resolve problemas complexos que envolvem múltiplos fluxos ou sistemas.", pd4:"Resolve problemas sistêmicos que atravessam múltiplos produtos ou domínios."},
+    {n:"Sistemas e integrações", pd1:"Trabalha em telas com poucas dependências técnicas.", pd2:"Considera integrações e regras de sistema ao desenhar uma solução.", pd3:"Desenha soluções que envolvem sistemas legados, múltiplas integrações e APIs.", pd4:"Orienta decisões de design em arquiteturas complexas e multi-sistema."},
+    {n:"Regras de negócio", pd1:"Segue regras de negócio já definidas para a tarefa.", pd2:"Identifica quando uma regra de negócio afeta a solução e ajusta o design.", pd3:"Antecipa conflitos entre regras de negócio antes que travem uma entrega.", pd4:"Contribui para definir regras de negócio a partir de uma visão de produto e cliente."},
+    {n:"Contexto regulatório", pd1:"Reconhece que existe um contexto regulatório no produto financeiro.", pd2:"Considera exigências regulatórias conhecidas ao propor soluções.", pd3:"Navega exigências regulatórias complexas sem travar a experiência do usuário.", pd4:"Ajuda o time a equilibrar conformidade regulatória e boa experiência em decisões críticas."},
+    {n:"Escala da solução", pd1:"Desenha para um caso de uso específico.", pd2:"Considera como a solução se comporta em diferentes volumes e cenários.", pd3:"Desenha soluções pensando em escala, manutenção e múltiplos contextos de uso.", pd4:"Define princípios de design para soluções usadas em larga escala por múltiplos clientes."},
+  ]},
+  {cat:"Evolução & contribuição para o time", group:"soft", rows:[
+    {n:"Aprendizado contínuo", pd1:"Busca aprender com feedback e com o próprio trabalho.", pd2:"Busca ativamente novos conhecimentos para evoluir sua prática.", pd3:"Aprofunda conhecimento em uma ou mais áreas e compartilha com o time.", pd4:"Mantém o time atualizado sobre práticas e tendências relevantes de Design."},
+    {n:"Melhoria de processos", pd1:"Segue os processos definidos pelo time.", pd2:"Sugere pequenos ajustes em processos que usa no dia a dia.", pd3:"Propõe e implementa melhorias de processo que beneficiam todo o time.", pd4:"Redesenha processos de forma que elevam a capacidade de entrega do time inteiro."},
+    {n:"Contribuição para a cultura do time", pd1:"Contribui para um ambiente de trabalho colaborativo.", pd2:"Contribui ativamente para rituais e dinâmicas do time.", pd3:"Fortalece a cultura de Design através de exemplo e prática consistente.", pd4:"Molda a cultura de Design em nível de área ou organização."},
+    {n:"Compartilhamento de conhecimento", pd1:"Compartilha aprendizados pontuais com o time.", pd2:"Compartilha conhecimento de forma regular em momentos do time.", pd3:"Cria conteúdos ou dinâmicas que elevam o conhecimento coletivo do time.", pd4:"Estrutura formas de compartilhamento de conhecimento em escala, além do próprio time."},
+    {n:"Impacto além do próprio trabalho", pd1:"Seu impacto está concentrado nas entregas que realiza.", pd2:"Seu trabalho começa a influenciar decisões de outras pessoas do time.", pd3:"Seu impacto é sentido em múltiplos projetos, não só no que executa diretamente.", pd4:"Seu impacto se estende à capacidade de Design de toda a organização."},
+  ]},
+  {cat:"Product Design", group:"hard", rows:[
+    {n:"UX Design", pd1:"Aplica princípios básicos de UX em telas e fluxos simples.", pd2:"Aplica UX de forma consistente em fluxos completos, considerando usabilidade e acessibilidade.", pd3:"Toma decisões de UX em cenários complexos, equilibrando múltiplas restrições.", pd4:"Define padrões de UX que elevam a qualidade das entregas do time."},
+    {n:"UI Design", pd1:"Constrói interfaces a partir de componentes já definidos.", pd2:"Constrói interfaces consistentes com o Design System, cuidando de detalhes visuais.", pd3:"Resolve casos de UI complexos que exigem adaptação ou criação de novos padrões.", pd4:"Define diretrizes visuais que orientam a construção de interfaces em toda a squad ou produto."},
+    {n:"Arquitetura da informação & fluxos", pd1:"Segue estruturas de navegação e fluxos já definidos.", pd2:"Organiza informação e fluxos de forma clara para funcionalidades específicas.", pd3:"Estrutura arquitetura de informação para produtos ou domínios complexos.", pd4:"Define princípios de arquitetura de informação usados em múltiplos produtos."},
+    {n:"Prototipação", pd1:"Cria protótipos simples para validar uma ideia.", pd2:"Cria protótipos com o nível de fidelidade adequado a cada etapa do processo.", pd3:"Prototipa cenários complexos, incluindo integrações e múltiplos estados.", pd4:"Define boas práticas de prototipação para o time."},
+    {n:"Design System & acessibilidade", pd1:"Usa componentes do Design System e segue diretrizes básicas de acessibilidade.", pd2:"Aplica o Design System e critérios de acessibilidade com consistência nas entregas.", pd3:"Identifica lacunas de acessibilidade e do Design System e propõe evoluções.", pd4:"Contribui diretamente para a evolução do Design System e dos padrões de acessibilidade da Matera."},
+  ]},
+  {cat:"Discovery & Research", group:"hard", rows:[
+    {n:"Entrevistas & testes de usabilidade", pd1:"Participa de entrevistas e testes conduzidos por outra pessoa.", pd2:"Planeja e conduz entrevistas e testes de usabilidade simples.", pd3:"Conduz entrevistas e testes complexos, ajustando o método ao contexto.", pd4:"Eleva a qualidade das entrevistas e testes realizados pelo time."},
+    {n:"Pesquisa qualitativa", pd1:"Auxilia na execução de pesquisas qualitativas.", pd2:"Planeja e conduz pesquisas qualitativas adequadas ao problema.", pd3:"Escolhe entre diferentes métodos qualitativos conforme a pergunta de pesquisa.", pd4:"Forma outros designers na prática de pesquisa qualitativa."},
+    {n:"Pesquisa quantitativa", pd1:"Consulta dados quantitativos já levantados por outras pessoas.", pd2:"Usa dados quantitativos simples para embasar decisões de design.", pd3:"Estrutura análises quantitativas para validar hipóteses de produto.", pd4:"Define quais dados quantitativos o time deveria acompanhar."},
+    {n:"Jornada do usuário", pd1:"Ajuda a mapear uma jornada já estruturada por outra pessoa.", pd2:"Mapeia jornadas do usuário para funcionalidades ou fluxos específicos.", pd3:"Mapeia jornadas complexas que atravessam múltiplos produtos ou canais.", pd4:"Define como o time mapeia e usa jornadas para tomar decisões."},
+    {n:"Síntese & validação de pesquisa", pd1:"Organiza registros de pesquisa de forma clara.", pd2:"Sintetiza achados em insights que orientam decisões de design.", pd3:"Valida soluções com rigor antes de decisões de maior impacto.", pd4:"Cria formas melhores do time sintetizar, validar e comunicar pesquisa."},
+  ]},
+  {cat:"Product", group:"hard", rows:[
+    {n:"Problem framing", pd1:"Entende o problema a partir do que é explicado pelo time.", pd2:"Reformula problemas mal definidos em termos mais claros e testáveis.", pd3:"Questiona o enquadramento de um problema antes de aceitar a solução proposta.", pd4:"Ensina o time a enquadrar problemas de forma mais precisa."},
+    {n:"Hipóteses & priorização", pd1:"Ajuda a testar hipóteses já formuladas.", pd2:"Formula e prioriza hipóteses com base em impacto e esforço.", pd3:"Lidera a priorização de hipóteses em iniciativas com múltiplas variáveis.", pd4:"Define critérios de priorização usados por mais de um time."},
+    {n:"Métricas de produto", pd1:"Sabe quais métricas o produto acompanha.", pd2:"Usa métricas de produto para avaliar o impacto de soluções.", pd3:"Propõe novas métricas para medir sucesso de iniciativas complexas.", pd4:"Define como o sucesso de Design é medido em diferentes produtos."},
+    {n:"Experimentação", pd1:"Participa de experimentos conduzidos pelo time.", pd2:"Desenha experimentos simples para validar hipóteses de design.", pd3:"Estrutura experimentos complexos com controle de variáveis relevantes.", pd4:"Define a prática de experimentação de Design para múltiplos times."},
+    {n:"Estratégia de produto", pd1:"Entende a estratégia do time em que atua.", pd2:"Conecta seu trabalho à estratégia do time no trimestre.", pd3:"Contribui com a definição da estratégia de produto do seu domínio.", pd4:"Ajuda a definir a estratégia de produto em nível de área."},
+  ]},
+  {cat:"Dados & Negócio", group:"hard", rows:[
+    {n:"Análise de dados", pd1:"Consulta dados básicos para entender o contexto de uma tarefa.", pd2:"Analisa dados simples para embasar decisões de design.", pd3:"Cruza diferentes fontes de dados para sustentar decisões complexas.", pd4:"Define quais análises de dados são relevantes para decisões estratégicas."},
+    {n:"Métricas de UX", pd1:"Sabe quais métricas de UX o time acompanha.", pd2:"Usa métricas de UX para avaliar suas próprias entregas.", pd3:"Propõe métricas de UX para novos fluxos ou funcionalidades.", pd4:"Define o conjunto de métricas de UX usado por múltiplos produtos."},
+    {n:"Contexto de negócio", pd1:"Entende o modelo de negócio do produto em que atua.", pd2:"Considera o modelo de negócio ao propor soluções de design.", pd3:"Equilibra necessidades de negócio e de usuário em decisões críticas.", pd4:"Traz uma visão de negócio que influencia decisões estratégicas de produto."},
+    {n:"Impacto & resultados", pd1:"Entende o impacto esperado da tarefa em que trabalha.", pd2:"Acompanha o impacto real do que entrega após o lançamento.", pd3:"Conecta suas entregas a resultados de negócio de forma explícita.", pd4:"É reconhecido pelo impacto de suas soluções em múltiplos produtos."},
+  ]},
+  {cat:"Tecnologia", group:"hard", rows:[
+    {n:"Handoff", pd1:"Entrega telas organizadas para o time de engenharia.", pd2:"Faz handoff completo, incluindo estados, especificações e decisões de design.", pd3:"Ajusta o nível de detalhe do handoff conforme a complexidade técnica do time.", pd4:"Define o padrão de handoff usado por múltiplos times de Design."},
+    {n:"Componentização", pd1:"Usa componentes existentes do Design System.", pd2:"Identifica quando uma solução deveria usar ou gerar um novo componente.", pd3:"Propõe componentes reutilizáveis a partir de padrões recorrentes.", pd4:"Define a estratégia de componentização do Design System."},
+    {n:"APIs e integrações", pd1:"Sabe que existem integrações envolvidas na funcionalidade.", pd2:"Considera limites de API e integrações ao desenhar uma solução.", pd3:"Desenha soluções que lidam bem com múltiplas integrações e suas limitações.", pd4:"Orienta decisões de design em arquiteturas com integrações complexas."},
+    {n:"Limitações técnicas", pd1:"Aceita as limitações técnicas apontadas pelo time.", pd2:"Considera limitações técnicas conhecidas ao propor soluções.", pd3:"Negocia trade-offs entre ambição de design e viabilidade técnica.", pd4:"Ajuda o time a decidir onde vale investir esforço técnico para melhor experiência."},
+    {n:"Colaboração com engenharia", pd1:"Se comunica com engenharia para tirar dúvidas sobre a implementação.", pd2:"Colabora com engenharia durante todo o ciclo de desenvolvimento.", pd3:"Antecipa questões técnicas junto à engenharia antes de finalizar o design.", pd4:"Estabelece uma parceria estratégica entre Design e Engenharia em múltiplos times."},
+  ]},
+  {cat:"Contexto Matera", group:"hard", rows:[
+    {n:"Produtos financeiros & regulatório", pd1:"Está aprendendo os conceitos básicos do mercado financeiro.", pd2:"Entende os principais conceitos financeiros e regulatórios do seu produto.", pd3:"Domina o contexto financeiro e regulatório do seu domínio com profundidade.", pd4:"É referência no domínio financeiro, ajudando outros designers a entenderem o contexto."},
+    {n:"B2B & múltiplos stakeholders", pd1:"Entende que o produto atende a clientes empresariais.", pd2:"Considera diferentes perfis dentro do cliente B2B ao desenhar soluções.", pd3:"Equilibra interesses de múltiplos stakeholders dentro de um mesmo cliente B2B.", pd4:"Define como o time deveria lidar com a complexidade de clientes B2B."},
+    {n:"Regras de negócio & complexidade operacional", pd1:"Segue regras de negócio já definidas para a tarefa.", pd2:"Identifica quando uma regra de negócio impacta a solução.", pd3:"Antecipa conflitos entre regras de negócio antes de travar uma entrega.", pd4:"Contribui para definir regras de negócio a partir de uma visão de produto e cliente."},
+    {n:"Operações críticas", pd1:"Entende que existem operações críticas envolvidas no produto.", pd2:"Considera riscos operacionais ao propor soluções.", pd3:"Desenha soluções que reduzem risco em operações críticas do cliente.", pd4:"Ajuda a definir como o time trata risco operacional em decisões de design."},
+  ]},
+  {cat:"IA aplicada a Product Design", group:"hard", rows:[
+    {n:"Uso responsável e aplicado de IA", pd1:"Utiliza ferramentas de IA para apoiar tarefas de Design, com orientação quando necessário.", pd2:"Utiliza IA de forma consciente para ampliar produtividade e qualidade das entregas.", pd3:"Integra IA ao processo de Design, avaliando oportunidades, limitações, riscos e impactos na experiência.", pd4:"Define boas práticas e amplia o uso responsável de IA no Design."},
+  ]},
+];
+
+/* ============================================================
+   RENDER: signals (A régua)
+   ============================================================ */
+function renderSignals(){
+  const box = document.getElementById("signalsContainer");
+  box.innerHTML = `
+    <div class="matrix-scroll" style="padding:0;">
+      <table class="matrix">
+        <tr><th>Pilar</th><th>PD1 · Júnior</th><th>PD2 · Pleno</th><th>PD3 · Sênior</th><th>PD4 · Especialista</th></tr>
+        ${SIGNALS.map(s=>`<tr><td>${s.nome}</td><td>${s.pd1}</td><td>${s.pd2}</td><td>${s.pd3}</td><td>${s.pd4}</td></tr>`).join("")}
+      </table>
+    </div>`;
+}
+
+function renderAlertViewer(lv){
+  const box = document.getElementById("alertViewer");
+  if(!lv){ box.innerHTML = `<p class="empty">Nenhum nível selecionado.</p>`; return; }
+  box.innerHTML = `
+    <div class="alert-box" style="margin-top:0;">
+      <div class="alert-title">${ALERT_INTRO[lv]}</div>
+      <ul>${ALERTAS[lv].map(a=>`<li>${a}</li>`).join("")}</ul>
+    </div>`;
+}
+
+function renderMatrix(){
+  const box = document.getElementById("matrixContainer");
+  const groups = [
+    {key:"soft", label:"Soft skills · Comportamental", lede:"Como você conduz o trabalho, se relaciona com o time, o cliente e o produto — o padrão de atuação, independente da técnica."},
+    {key:"hard", label:"Hard skills · Técnica", lede:"O domínio técnico e de craft: design, pesquisa, dados, tecnologia e contexto de negócio da Matera."},
+  ];
+  box.innerHTML = groups.map(g=>{
+    const cats = MATRIX.filter(c=>c.group===g.key);
+    return `
+      <h3 class="matrix-group-label">${g.label}</h3>
+      <p class="matrix-group-lede">${g.lede}</p>
+      ${cats.map(cat => `
+        <details class="matrix-cat">
+          <summary><span>${cat.cat}</span><span class="chev">▸</span></summary>
+          <div class="matrix-scroll">
+            <table class="matrix">
+              <tr><th>Critério</th><th>PD1</th><th>PD2</th><th>PD3</th><th>PD4</th></tr>
+              ${cat.rows.map(r=>`<tr><td>${r.n}</td><td>${r.pd1}</td><td>${r.pd2}</td><td>${r.pd3}</td><td>${r.pd4}</td></tr>`).join("")}
+            </table>
+          </div>
+        </details>
+      `).join("")}
+    `;
+  }).join("");
+}
+
+/* ============================================================
+   QUESTIONÁRIO: uma pergunta por sinal, em primeira pessoa.
+   O resultado (o nível de cada resposta) é o que alimenta a
+   "reguinha" final — ninguém escolhe o próprio nível direto,
+   ele é derivado das respostas.
+   ============================================================ */
+const QUESTIONS = [
+  {id:"autonomia", nome:"Autonomia", group:"soft", pergunta:"Como você conduz o seu trabalho no dia a dia?", opts:{
+    PD1:"Preciso de orientação para executar e busco apoio quando encontro obstáculos.",
+    PD2:"Conduzo meu trabalho de ponta a ponta e busco direção só nas decisões de maior impacto.",
+    PD3:"Defino o caminho em problemas complexos, com pouca necessidade de direção.",
+    PD4:"Crio clareza em problemas ambíguos e oriento outros designers na condução do trabalho.",
+  }},
+  {id:"complexidade", nome:"Complexidade", group:"soft", pergunta:"Que tipo de problema você resolve com mais frequência?", opts:{
+    PD1:"Problemas conhecidos, com solução relativamente clara.",
+    PD2:"Problemas de complexidade média, que exigem investigação.",
+    PD3:"Problemas complexos, com múltiplos fluxos ou sistemas envolvidos.",
+    PD4:"Problemas sistêmicos, que atravessam vários produtos ou domínios.",
+  }},
+  {id:"escopo", nome:"Escopo", group:"soft", pergunta:"Qual é o tamanho do que você resolve normalmente?", opts:{
+    PD1:"Uma tarefa ou feature pontual.",
+    PD2:"Um fluxo completo ou um problema específico.",
+    PD3:"Um produto ou domínio inteiro.",
+    PD4:"Múltiplos contextos ou produtos ao mesmo tempo.",
+  }},
+  {id:"cliente", nome:"Cliente", group:"soft", pergunta:"Como você se relaciona com o cliente no seu trabalho?", opts:{
+    PD1:"Considero o cliente a partir do que o time já levantou.",
+    PD2:"Investigo ativamente as necessidades reais do cliente antes de desenhar.",
+    PD3:"Defendo a perspectiva do cliente em discussões com vários stakeholders.",
+    PD4:"Influencio decisões estratégicas a partir de uma visão profunda do cliente.",
+  }},
+  {id:"produto", nome:"Produto", group:"soft", pergunta:"Qual é a sua relação com as decisões de produto?", opts:{
+    PD1:"Entendo a funcionalidade em que estou trabalhando.",
+    PD2:"Contribuo com argumentos de design para as decisões de produto.",
+    PD3:"Influencio decisões de produto com base em impacto para usuário e negócio.",
+    PD4:"Direciono decisões de produto a partir de uma visão de design.",
+  }},
+  {id:"colaboracao", nome:"Colaboração", group:"soft", pergunta:"Como é a sua colaboração com o time?", opts:{
+    PD1:"Participo ativamente das dinâmicas do time.",
+    PD2:"Colaboro de forma fluida com PM, tech lead e outros papéis.",
+    PD3:"Influencio decisões do time mesmo fora da minha área direta.",
+    PD4:"Elevo a forma como múltiplos times colaboram com Design.",
+  }},
+  {id:"design", nome:"Design", group:"soft", pergunta:"Qual é o seu papel nas soluções de design?", opts:{
+    PD1:"Executo soluções já direcionadas.",
+    PD2:"Resolvo problemas de design de ponta a ponta.",
+    PD3:"Lidero a exploração de soluções em problemas complexos.",
+    PD4:"Defino os padrões de design que o time usa como referência.",
+  }},
+  {id:"impacto", nome:"Impacto", group:"soft", pergunta:"Onde o seu trabalho gera mais impacto?", opts:{
+    PD1:"No que eu entrego diretamente.",
+    PD2:"Nos problemas que eu resolvo de ponta a ponta.",
+    PD3:"Nos resultados que minhas decisões geram para o produto.",
+    PD4:"Na capacidade de Design de toda a organização.",
+  }},
+
+  {id:"hs_product_design", nome:"Craft (UX/UI/DS)", group:"hard", pergunta:"Qual é o seu nível de domínio de UX, UI, prototipação e Design System?", opts:{
+    PD1:"Aplico princípios básicos de UX/UI e uso os componentes já definidos do Design System.",
+    PD2:"Aplico UX e UI com consistência em fluxos completos, com boa fidelidade ao Design System e à acessibilidade.",
+    PD3:"Resolvo casos complexos de UX/UI que exigem adaptar ou criar novos padrões, e aponto lacunas no Design System.",
+    PD4:"Defino padrões de UX/UI e contribuo diretamente para a evolução do Design System e da acessibilidade.",
+  }},
+  {id:"hs_research", nome:"Pesquisa & discovery", group:"hard", pergunta:"Como é a sua prática de pesquisa e discovery?", opts:{
+    PD1:"Participo de pesquisas conduzidas por outras pessoas e ajudo a organizar os registros.",
+    PD2:"Planejo e conduzo pesquisas qualitativas e quantitativas simples, e sintetizo achados em insights.",
+    PD3:"Escolho o método certo para cada problema, conduzo pesquisas complexas e valido soluções com rigor.",
+    PD4:"Formo outros designers em pesquisa e defino como o time sintetiza e usa achados de pesquisa.",
+  }},
+  {id:"hs_product", nome:"Product & métricas", group:"hard", pergunta:"Qual é a sua relação com problem framing, hipóteses e métricas de produto?", opts:{
+    PD1:"Entendo o problema a partir do que o time explica e ajudo a testar hipóteses já formuladas.",
+    PD2:"Reformulo problemas mal definidos, formulo e priorizo hipóteses, e uso métricas para avaliar meu trabalho.",
+    PD3:"Questiono o enquadramento de um problema antes de aceitar a solução, e estruturo experimentos complexos.",
+    PD4:"Ensino o time a enquadrar problemas e ajudo a definir a estratégia de produto do meu domínio.",
+  }},
+  {id:"hs_dados_negocio", nome:"Dados & negócio", group:"hard", pergunta:"Como você usa dados e entende o contexto de negócio nas suas decisões?", opts:{
+    PD1:"Consulto dados básicos e entendo o modelo de negócio do produto em que atuo.",
+    PD2:"Analiso dados simples para embasar decisões e considero o modelo de negócio ao propor soluções.",
+    PD3:"Cruzo diferentes fontes de dados e equilibro necessidades de negócio e de usuário em decisões críticas.",
+    PD4:"Defino quais análises são relevantes estrategicamente e sou reconhecido pelo impacto das minhas soluções.",
+  }},
+  {id:"hs_tecnologia", nome:"Tecnologia & engenharia", group:"hard", pergunta:"Como é a sua colaboração técnica com engenharia (handoff, componentes, integrações)?", opts:{
+    PD1:"Entrego telas organizadas e aceito as limitações técnicas apontadas pelo time.",
+    PD2:"Faço handoff completo, considero limites de API e colaboro com engenharia durante todo o ciclo.",
+    PD3:"Ajusto o handoff conforme a complexidade técnica e negocio trade-offs entre ambição de design e viabilidade.",
+    PD4:"Defino o padrão de handoff e a estratégia de componentização usados pelo time.",
+  }},
+  {id:"hs_contexto_matera", nome:"Contexto financeiro", group:"hard", pergunta:"Qual é o seu domínio do contexto financeiro, regulatório e B2B da Matera?", opts:{
+    PD1:"Estou aprendendo os conceitos básicos do mercado financeiro e entendo que o produto atende clientes B2B.",
+    PD2:"Entendo os principais conceitos financeiros e regulatórios do meu produto e considero riscos operacionais.",
+    PD3:"Domino com profundidade o contexto financeiro e regulatório do meu domínio e equilibro múltiplos stakeholders B2B.",
+    PD4:"Sou referência no domínio financeiro e ajudo a definir como o time trata risco operacional em decisões de design.",
+  }},
+  {id:"hs_ia", nome:"IA aplicada", group:"hard", pergunta:"Como você usa IA no seu processo de Design?", opts:{
+    PD1:"Utilizo ferramentas de IA para apoiar tarefas de Design, com orientação quando necessário.",
+    PD2:"Utilizo IA de forma consciente para ampliar produtividade e qualidade das entregas.",
+    PD3:"Integro IA ao processo de Design, avaliando oportunidades, limitações, riscos e impactos na experiência.",
+    PD4:"Defino boas práticas e amplio o uso responsável de IA no Design do time.",
+  }},
+];
+
+/** Deriva o nível predominante a partir das respostas — o mesmo
+ *  cálculo é usado no "Meu mapa" e no painel de gestão, então as
+ *  duas telas sempre concordam (um único modelo). Em empate,
+ *  fica com o nível mais baixo entre os empatados (leitura
+ *  conservadora, na linha do "padrão consistente, não a média").
+ *  Passar group ("soft" | "hard") calcula o nível só daquele
+ *  bloco de perguntas — é isso que permite comparar o perfil
+ *  comportamental com o técnico em vez de misturar os dois. */
+function computeLevel(dims, group){
+  const qs = group ? QUESTIONS.filter(q=>q.group===group) : QUESTIONS;
+  dims = dims || {};
+  const answered = qs.filter(q=>dims[q.id]).length;
+  if(answered < qs.length) return null;
+  const counts = {PD1:0,PD2:0,PD3:0,PD4:0};
+  qs.forEach(q=>{ const v = dims[q.id]; if(counts[v]!==undefined) counts[v]++; });
+  let best = "PD1", bestCount = -1;
+  LEVELS.forEach(lv=>{
+    if(counts[lv] > bestCount){ bestCount = counts[lv]; best = lv; }
+  });
+  return {level:best, counts};
+}
+
+let mapaState = { dims:{}, nextLevel:"", evidences:[], gaps:[] };
+let mapaView = "loading"; // 'intro' | 'wizard' | 'results'
+let wizardIndex = 0;
+let editingSingle = false;
+
+function firstUnanswered(){
+  for(let i=0;i<QUESTIONS.length;i++){
+    if(!mapaState.dims[QUESTIONS[i].id]) return i;
+  }
+  return -1;
+}
+
+/* Decide para onde levar a pessoa: quem nunca respondeu nada vê a
+   intro (contexto antes de 15 perguntas seguidas); quem já começou
+   volta direto pra pergunta onde parou (reconhecimento, não
+   obrigar a lembrar o próprio progresso); quem terminou vê o
+   resultado. Usada tanto no carregamento quanto fora do claude.ai. */
+function startMeuMapaView(){
+  const fu = firstUnanswered();
+  if(fu === 0){ mapaView = "intro"; }
+  else if(fu === -1){ mapaView = "results"; }
+  else { mapaView = "wizard"; wizardIndex = fu; }
+  renderMeuMapa();
+}
+
+function renderMeuMapa(){
+  const root = document.getElementById("meuMapaRoot");
+  if(!root) return;
+  if(mapaView === "intro"){ renderIntroScreen(root); }
+  else if(mapaView === "wizard"){ renderWizardStep(root); }
+  else if(mapaView === "results"){ renderResultsScreen(root); }
+  else { root.innerHTML = `<p class="empty">Carregando…</p>`; }
+}
+
+function renderIntroScreen(root){
+  root.innerHTML = `
+    <div class="card">
+      <p class="section-eyebrow"><span class="stepnum">✓</span>Antes de começar</p>
+      <h3 style="font-family:var(--font-display);font-weight:500;font-size:24px;margin:0 0 12px;">Vamos montar o seu mapa de carreira</h3>
+      <p class="section-purpose" style="font-size:14px;margin-bottom:18px;">São 15 perguntas — 8 sobre como você atua no dia a dia (comportamental) e 7 sobre domínio técnico (hard skills). Leva cerca de 10 minutos.</p>
+      <ul style="margin:0 0 22px;padding-left:20px;font-size:13.5px;color:var(--ink-soft);line-height:1.7;">
+        <li>Não existe resposta certa — cada opção reflete um padrão de atuação diferente, não uma nota de 0 a 10.</li>
+        <li>As opções aparecem em ordem embaralhada de propósito, então leia todas antes de escolher.</li>
+        <li>Suas respostas são salvas a cada passo — dá pra sair e voltar depois de onde parou.</li>
+        <li>No fim, você registra evidências, escolhe um próximo nível e define prioridades de desenvolvimento.</li>
+      </ul>
+      <button class="btn" id="startWizardBtn">Começar</button>
+    </div>
+  `;
+  document.getElementById("startWizardBtn").addEventListener("click", ()=>{
+    mapaView = "wizard"; wizardIndex = 0;
+    renderMeuMapa();
+  });
+}
+
+/* Ordem embaralhada por pergunta — gerada uma vez por sessão e
+   mantida estável (não re-embaralha a cada render), para que a
+   posição na tela nunca corresponda sempre a PD1→PD4 e não vicie
+   quem está respondendo a cravar sempre a primeira opção. */
+const optionOrderCache = {};
+function shuffledOptionOrder(qId){
+  if(!optionOrderCache[qId]){
+    const arr = LEVELS.slice();
+    for(let i=arr.length-1;i>0;i--){
+      const j = Math.floor(Math.random()*(i+1));
+      [arr[i],arr[j]] = [arr[j],arr[i]];
+    }
+    optionOrderCache[qId] = arr;
+  }
+  return optionOrderCache[qId];
+}
+
+function renderWizardStep(root){
+  const q = QUESTIONS[wizardIndex];
+  const pct = Math.round(((wizardIndex+1)/QUESTIONS.length)*100);
+  const groupQs = QUESTIONS.filter(x=>x.group===q.group);
+  const groupPos = groupQs.indexOf(q)+1;
+  const groupLabel = q.group==="hard" ? "Bloco técnico (hard skills)" : "Bloco comportamental (soft skills)";
+  root.innerHTML = `
+    <div class="card">
+      <div class="progress-track"><div class="progress-fill" style="width:${pct}%"></div></div>
+      <div class="step-label">${editingSingle ? "Editando uma resposta" : `${groupLabel} · pergunta ${groupPos} de ${groupQs.length} <span class="muted">(${wizardIndex+1}/${QUESTIONS.length} no total)</span>`}</div>
+      <h3 style="font-family:var(--font-display);font-weight:500;font-size:22px;margin:0 0 16px;">${q.pergunta}</h3>
+      <div id="optList"></div>
+      <div style="display:flex;gap:10px;margin-top:6px;">
+        ${(wizardIndex>0 && !editingSingle) ? `<button class="btn secondary" id="wizBack">Voltar</button>` : ""}
+        ${editingSingle ? `<button class="btn secondary" id="wizCancelEdit">Cancelar</button>` : ""}
+      </div>
+    </div>
+  `;
+  const optBox = document.getElementById("optList");
+  shuffledOptionOrder(q.id).forEach(lv=>{
+    const btn = document.createElement("button");
+    btn.className = "option-card";
+    btn.type = "button";
+    const txt = document.createElement("div");
+    txt.textContent = q.opts[lv];
+    btn.appendChild(txt);
+    if(mapaState.dims[q.id] === lv){ btn.style.borderColor = "var(--matera-purple-light)"; }
+    btn.addEventListener("click", ()=> answerQuestion(q.id, lv));
+    optBox.appendChild(btn);
+  });
+  const backBtn = document.getElementById("wizBack");
+  if(backBtn) backBtn.addEventListener("click", ()=>{ wizardIndex--; renderMeuMapa(); });
+  const cancelBtn = document.getElementById("wizCancelEdit");
+  if(cancelBtn) cancelBtn.addEventListener("click", ()=>{ editingSingle=false; mapaView="results"; renderMeuMapa(); });
+}
+
+function answerQuestion(dimId, lvl){
+  mapaState.dims[dimId] = lvl;
+  persistAssessment(); // autosave as they go — no separate save step for this part
+  if(editingSingle){
+    editingSingle = false;
+    mapaView = "results";
+  }else if(wizardIndex < QUESTIONS.length-1){
+    wizardIndex++;
+  }else{
+    mapaView = "results";
+  }
+  renderMeuMapa();
+}
+
+function renderResultsScreen(root){
+  const overall = computeLevel(mapaState.dims);
+  const softResult = computeLevel(mapaState.dims, "soft");
+  const hardResult = computeLevel(mapaState.dims, "hard");
+  const lvl = overall ? overall.level : null;
+
+  function buildRows(list){
+    return list.map(q=>{
+      const ans = mapaState.dims[q.id];
+      const idx = LEVELS.indexOf(ans);
+      const pos = (idx*25)+12.5;
+      return `
+        <div class="ruler-row" data-editdim="${q.id}">
+          <div class="ruler-row-label">${q.nome}</div>
+          <div class="ruler-row-track">
+            <span class="track-seg l1"></span><span class="track-seg l2"></span><span class="track-seg l3"></span><span class="track-seg l4"></span>
+            <span class="track-dot l${idx+1}" style="left:${pos}%"></span>
+          </div>
+          <div class="ruler-row-value">${ans}</div>
+        </div>`;
+    }).join("");
+  }
+  const softRows = buildRows(QUESTIONS.filter(q=>q.group==="soft"));
+  const hardRows = buildRows(QUESTIONS.filter(q=>q.group==="hard"));
+
+  root.innerHTML = `
+    <nav class="step-nav">
+      <a href="#secDiagnostico"><span class="stepnum">1</span>Diagnóstico</a>
+      <a href="#secEvidencias"><span class="stepnum">2</span>Evidências</a>
+      <a href="#secMeta"><span class="stepnum">3</span>Sua meta</a>
+      <a href="#secPlano"><span class="stepnum">4</span>Plano de ação</a>
+      <a href="#secPdi"><span class="stepnum">✓</span>Baixar PDI</a>
+    </nav>
+
+    <div class="card" id="secDiagnostico">
+      <p class="section-eyebrow"><span class="stepnum">1</span>Etapa 1 de 4 · Diagnóstico</p>
+      <h3>Seu retrato de hoje</h3>
+      <p class="section-purpose">Um retrato automático, calculado a partir das suas respostas — não uma autoavaliação de "quanto eu me esforço", e sim de "que padrão de atuação é mais comum no meu dia a dia hoje". Comportamental e técnico são calculados separadamente: é comum estarem em níveis diferentes.</p>
+      ${lvl ? `<p style="font-family:var(--font-display);font-size:22px;font-weight:500;margin:0 0 10px;">Nível predominante: <span class="badge l${lvl.slice(-1)}" style="font-size:15px;padding:6px 14px;">${LEVEL_LABEL[lvl]}</span></p>` : ""}
+      <div class="profile-chips">
+        ${softResult ? `<span class="badge l${softResult.level.slice(-1)}" style="font-size:12.5px;padding:6px 12px;">Comportamental · ${LEVEL_LABEL[softResult.level]}</span>` : ""}
+        ${hardResult ? `<span class="badge l${hardResult.level.slice(-1)}" style="font-size:12.5px;padding:6px 12px;">Técnica · ${LEVEL_LABEL[hardResult.level]}</span>` : ""}
+      </div>
+      ${(softResult && hardResult && softResult.level !== hardResult.level) ? `<div class="alert-box" style="background:var(--paper);border:1px solid var(--line);"><div class="alert-title" style="color:var(--ink-soft);">Assimetria entre perfis</div><p style="margin:0;font-size:13px;">Seu padrão comportamental e técnico estão em níveis diferentes. Isso não é um problema — é justamente o tipo de sinal que vale trazer para uma conversa de carreira: qual dos dois puxa o seu desenvolvimento agora?</p></div>` : ""}
+
+      <p class="ruler-group-label" style="margin-top:20px;">Comportamental (soft skills)</p>
+      <div class="ruler-legend">
+        <span></span>
+        <div class="legend-quarters"><span>PD1</span><span>PD2</span><span>PD3</span><span>PD4</span></div>
+        <span></span>
+      </div>
+      <div class="ruler-rows">${softRows}</div>
+
+      <p class="ruler-group-label" style="margin-top:22px;">Técnica (hard skills)</p>
+      <div class="ruler-legend">
+        <span></span>
+        <div class="legend-quarters"><span>PD1</span><span>PD2</span><span>PD3</span><span>PD4</span></div>
+        <span></span>
+      </div>
+      <div class="ruler-rows">${hardRows}</div>
+
+      <p class="hint" style="margin-top:14px;">Toque numa linha para revisar aquela resposta.</p>
+      <button class="btn secondary" id="redoWizard">Revisar todas as respostas desde o início</button>
+    </div>
+
+    <div class="card" id="secEvidencias">
+      <p class="section-eyebrow"><span class="stepnum">2</span>Etapa 2 de 4 · Evidências</p>
+      <h3>O que sustenta o seu nível hoje</h3>
+      <p class="section-purpose">Antes de mirar no próximo degrau, deixe registrado o que já comprova o nível atual. É o material que você (e seu gestor) vão usar numa conversa de carreira ou calibração.</p>
+      <p class="hint">Evidências concretas: um projeto, uma decisão, uma pesquisa, um resultado com cliente. Evite generalidades como "sou bom em discovery".</p>
+      <div id="evidenceList"></div>
+      <div class="add-row">
+        <input type="text" id="evidenceInput" placeholder="Ex: No projeto X, investiguei o problema antes de desenhar e a pesquisa mudou a hipótese inicial.">
+        <button class="btn secondary" id="addEvidenceBtn">Adicionar</button>
+      </div>
+    </div>
+
+    <div class="card" id="secMeta">
+      <p class="section-eyebrow"><span class="stepnum">3</span>Etapa 3 de 4 · Sua meta</p>
+      <h3>Próximo nível almejado</h3>
+      <p class="section-purpose">Para onde você quer ir a partir daqui. É uma escolha sua — não precisa ser o nível imediatamente seguinte, nem algo que você precisa perseguir agora.</p>
+      <select id="selNextLevel" style="max-width:280px;">
+        <option value="">Selecione</option>
+        <option value="PD1">PD1 · Júnior</option>
+        <option value="PD2">PD2 · Pleno</option>
+        <option value="PD3">PD3 · Sênior</option>
+        <option value="PD4">PD4 · Especialista</option>
+      </select>
+    </div>
+
+    <div class="card" id="secPlano">
+      <p class="section-eyebrow"><span class="stepnum">4</span>Etapa 4 de 4 · Plano de ação</p>
+      <h3>O que falta para o próximo nível</h3>
+      <p class="section-purpose">A ponte entre onde você está (Etapa 1) e a sua meta (Etapa 3). No máximo 3 prioridades — não é preciso desenvolver tudo ao mesmo tempo, e isso vira pauta natural para o seu 1:1. Preencha os três campos para que a prioridade saia daqui já pronta para virar um PDI.</p>
+      <div id="gapList"></div>
+      <div class="gap-form">
+        <div class="field-row">
+          <label class="field" for="gapInput">O que desenvolver</label>
+          <input type="text" id="gapInput" placeholder="Ex: Conduzir pesquisas complexas sem apoio pontual.">
+        </div>
+        <div class="field-row">
+          <label class="field" for="gapActionInput">Como vou desenvolver</label>
+          <input type="text" id="gapActionInput" placeholder="Ex: Mentoria quinzenal com um PD sênior + conduzir 1 pesquisa sozinho no trimestre.">
+        </div>
+        <div class="field-row" style="margin-bottom:14px;">
+          <label class="field" for="gapDeadlineInput">Prazo</label>
+          <select id="gapDeadlineInput">
+            <option value="">Selecione</option>
+            <option value="Neste trimestre">Neste trimestre</option>
+            <option value="Próximo trimestre">Próximo trimestre</option>
+            <option value="Nos próximos 6 meses">Nos próximos 6 meses</option>
+            <option value="A definir com o gestor">A definir com o gestor</option>
+          </select>
+        </div>
+        <button class="btn secondary" id="addGapBtn">Adicionar prioridade</button>
+      </div>
+      <p class="hint" id="gapLimitHint" style="display:none;margin:10px 0 0;">Máximo de 3 prioridades atingido — remova uma para adicionar outra.</p>
+    </div>
+
+    <div class="card pdi-card" id="secPdi">
+      <p class="section-eyebrow"><span class="stepnum">✓</span>Levar para a Qulture Rocks</p>
+      <h3>Baixar seu PDI</h3>
+      <p class="section-purpose">Gera um arquivo Word com o diagnóstico, as evidências e as prioridades acima, pronto para anexar ou colar ao oficializar seu PDI na Qulture Rocks.</p>
+      <div class="pdi-actions">
+        <button class="btn" id="downloadPdiBtn">Baixar PDI (Word) <span aria-hidden="true">↓</span></button>
+        <a class="btn secondary qr-link" href="https://app.qulture.rocks/users/sign_in" target="_blank" rel="noopener noreferrer">
+          <span class="qr-badge" aria-hidden="true">QR</span> Entrar na Qulture Rocks <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+      <p class="status-line" id="pdiStatus"></p>
+    </div>
+
+    <div style="display:flex;align-items:center;gap:8px;">
+      <span class="status-line" id="mapaStatus">Suas respostas são salvas automaticamente, a cada alteração.</span>
+    </div>
+  `;
+
+  // row -> edit that single question
+  root.querySelectorAll("[data-editdim]").forEach(row=>{
+    row.addEventListener("click", ()=>{
+      const dimId = row.getAttribute("data-editdim");
+      wizardIndex = QUESTIONS.findIndex(q=>q.id===dimId);
+      editingSingle = true;
+      mapaView = "wizard";
+      renderMeuMapa();
+    });
+  });
+
+  document.getElementById("redoWizard").addEventListener("click", ()=>{
+    wizardIndex = 0;
+    editingSingle = false;
+    mapaView = "wizard";
+    renderMeuMapa();
+  });
+
+  document.getElementById("downloadPdiBtn").addEventListener("click", downloadPdiDocx);
+
+  document.getElementById("selNextLevel").value = mapaState.nextLevel || "";
+  document.getElementById("selNextLevel").addEventListener("change",(e)=>{
+    mapaState.nextLevel = e.target.value;
+    persistAssessment(true);
+  });
+
+  renderEvidenceList();
+  renderGapList();
+
+  document.getElementById("addEvidenceBtn").addEventListener("click", ()=>{
+    const inp = document.getElementById("evidenceInput");
+    if(inp.value.trim()){
+      mapaState.evidences.push(inp.value.trim());
+      inp.value = "";
+      renderEvidenceList();
+      persistAssessment(true);
+    }
+  });
+  document.getElementById("evidenceInput").addEventListener("keydown",(e)=>{
+    if(e.key==="Enter"){ document.getElementById("addEvidenceBtn").click(); }
+  });
+  document.getElementById("addGapBtn").addEventListener("click", ()=>{
+    if(mapaState.gaps.length>=3){ return; }
+    const gapInp = document.getElementById("gapInput");
+    const actionInp = document.getElementById("gapActionInput");
+    const deadlineInp = document.getElementById("gapDeadlineInput");
+    if(gapInp.value.trim()){
+      mapaState.gaps.push({
+        gap: gapInp.value.trim(),
+        action: actionInp.value.trim(),
+        deadline: deadlineInp.value,
+      });
+      gapInp.value = ""; actionInp.value = ""; deadlineInp.value = "";
+      renderGapList();
+      persistAssessment(true);
+    }
+  });
+}
+
+function renderEvidenceList(){
+  const box = document.getElementById("evidenceList");
+  if(!box) return;
+  if(mapaState.evidences.length===0){
+    box.innerHTML = `<p class="empty">Nenhuma evidência ainda.</p>`;
+    return;
+  }
+  box.innerHTML = mapaState.evidences.map((e,i)=>`
+    <div class="item-row">
+      <div class="txt"></div>
+      <button class="btn danger" data-idx="${i}" data-kind="evidence">Remover</button>
+    </div>
+  `).join("");
+  box.querySelectorAll(".item-row").forEach((row,i)=>{
+    row.querySelector(".txt").textContent = mapaState.evidences[i];
+  });
+  box.querySelectorAll('[data-kind="evidence"]').forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+      mapaState.evidences.splice(parseInt(btn.dataset.idx),1);
+      renderEvidenceList();
+      persistAssessment(true);
+    });
+  });
+}
+
+function renderGapList(){
+  const box = document.getElementById("gapList");
+  if(!box) return;
+  if(mapaState.gaps.length===0){
+    box.innerHTML = `<p class="empty">Nenhuma prioridade definida ainda.</p>`;
+  }else{
+    box.innerHTML = mapaState.gaps.map((g,i)=>{
+      // defesa contra dados antigos salvos como string simples, de
+      // antes deste campo ter ação e prazo
+      const item = (typeof g === "string") ? {gap:g, action:"", deadline:""} : g;
+      return `
+      <div class="gap-item">
+        <div class="gap-item-main">
+          <div class="gap-item-title"></div>
+          <div class="gap-item-action"></div>
+          ${item.deadline ? `<span class="gap-item-deadline"></span>` : ""}
+        </div>
+        <button class="btn danger" data-idx="${i}" data-kind="gap">Remover</button>
+      </div>`;
+    }).join("");
+    box.querySelectorAll(".gap-item").forEach((row,i)=>{
+      const g = mapaState.gaps[i];
+      const item = (typeof g === "string") ? {gap:g, action:"", deadline:""} : g;
+      row.querySelector(".gap-item-title").textContent = item.gap;
+      row.querySelector(".gap-item-action").textContent = item.action ? ("Como: " + item.action) : "Ação ainda não definida.";
+      const deadlineEl = row.querySelector(".gap-item-deadline");
+      if(deadlineEl) deadlineEl.textContent = item.deadline;
+    });
+    box.querySelectorAll('[data-kind="gap"]').forEach(btn=>{
+      btn.addEventListener("click", ()=>{
+        mapaState.gaps.splice(parseInt(btn.dataset.idx),1);
+        renderGapList();
+        persistAssessment(true);
+      });
+    });
+  }
+  // limite de 3 prioridades: desabilita o campo e avisa, em vez de
+  // simplesmente ignorar o clique em silêncio (prevenção de erro +
+  // visibilidade do estado do sistema)
+  const atLimit = mapaState.gaps.length >= 3;
+  const gapInput = document.getElementById("gapInput");
+  const gapActionInput = document.getElementById("gapActionInput");
+  const gapDeadlineInput = document.getElementById("gapDeadlineInput");
+  const addGapBtn = document.getElementById("addGapBtn");
+  const gapLimitHint = document.getElementById("gapLimitHint");
+  if(gapInput) gapInput.disabled = atLimit;
+  if(gapActionInput) gapActionInput.disabled = atLimit;
+  if(gapDeadlineInput) gapDeadlineInput.disabled = atLimit;
+  if(addGapBtn) addGapBtn.disabled = atLimit;
+  if(gapLimitHint) gapLimitHint.style.display = atLimit ? "block" : "none";
+}
+
+/* ============================================================
+   PDI (.docx) — gera um Word de verdade, no navegador, sem
+   biblioteca externa. Um .docx é só um .zip com XML dentro, então
+   escrevemos o zip (formato "stored", sem compressão — reduz risco
+   e dispensa um algoritmo de deflate) e o XML mínimo do Word.
+   ============================================================ */
+const CRC_TABLE = (function(){
+  const table = [];
+  for(let n=0;n<256;n++){
+    let c = n;
+    for(let k=0;k<8;k++){ c = (c&1) ? (0xEDB88320 ^ (c>>>1)) : (c>>>1); }
+    table[n] = c>>>0;
+  }
+  return table;
+})();
+function crc32(bytes){
+  let crc = 0 ^ (-1);
+  for(let i=0;i<bytes.length;i++){ crc = (crc>>>8) ^ CRC_TABLE[(crc ^ bytes[i]) & 0xFF]; }
+  return (crc ^ (-1)) >>> 0;
+}
+function u16le(n){ return new Uint8Array([n & 0xFF, (n>>>8) & 0xFF]); }
+function u32le(n){ return new Uint8Array([n & 0xFF, (n>>>8) & 0xFF, (n>>>16) & 0xFF, (n>>>24) & 0xFF]); }
+function concatBytes(parts){
+  let total = 0;
+  parts.forEach(p=>{ total += p.length; });
+  const out = new Uint8Array(total);
+  let pos = 0;
+  parts.forEach(p=>{ out.set(p, pos); pos += p.length; });
+  return out;
+}
+/** Monta um .zip mínimo (método "stored") a partir de {name, text} */
+function buildZip(files){
+  const encoder = new TextEncoder();
+  const localParts = [];
+  const centralParts = [];
+  let offset = 0;
+  files.forEach(f=>{
+    const nameBytes = encoder.encode(f.name);
+    const data = encoder.encode(f.text);
+    const crc = crc32(data);
+    const dosDate = u16le(0x21); // 1980-01-01 — qualquer data válida serve
+    const dosTime = u16le(0);
+    const local = concatBytes([
+      u32le(0x04034b50), u16le(20), u16le(0), u16le(0),
+      dosTime, dosDate, u32le(crc), u32le(data.length), u32le(data.length),
+      u16le(nameBytes.length), u16le(0), nameBytes,
+    ]);
+    localParts.push(local, data);
+    const central = concatBytes([
+      u32le(0x02014b50), u16le(20), u16le(20), u16le(0), u16le(0),
+      dosTime, dosDate, u32le(crc), u32le(data.length), u32le(data.length),
+      u16le(nameBytes.length), u16le(0), u16le(0), u16le(0), u16le(0), u32le(0),
+      u32le(offset), nameBytes,
+    ]);
+    centralParts.push(central);
+    offset += local.length + data.length;
+  });
+  const centralDir = concatBytes(centralParts);
+  const eocd = concatBytes([
+    u32le(0x06054b50), u16le(0), u16le(0), u16le(files.length), u16le(files.length),
+    u32le(centralDir.length), u32le(offset), u16le(0),
+  ]);
+  return concatBytes([...localParts, centralDir, eocd]);
+}
+
+function xmlEscape(str){
+  return String(str==null ? "" : str)
+    .replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;").replace(/'/g,"&apos;");
+}
+/** Um parágrafo do Word (word/document.xml), com formatação básica via rPr direto no run (sem depender de styles.xml). */
+function docxP(text, opts){
+  opts = opts || {};
+  const rPr = [];
+  if(opts.bold) rPr.push("<w:b/>");
+  if(opts.color) rPr.push(`<w:color w:val="${opts.color}"/>`);
+  if(opts.size) rPr.push(`<w:sz w:val="${opts.size}"/><w:szCs w:val="${opts.size}"/>`);
+  if(opts.italic) rPr.push("<w:i/>");
+  const rPrXml = rPr.length ? `<w:rPr>${rPr.join("")}</w:rPr>` : "";
+  const pPr = opts.spacingAfter!=null ? `<w:pPr><w:spacing w:after="${opts.spacingAfter}"/></w:pPr>` : "";
+  const runText = opts.bullet ? "•  " + text : text;
+  return `<w:p>${pPr}<w:r>${rPrXml}<w:t xml:space="preserve">${xmlEscape(runText)}</w:t></w:r></w:p>`;
+}
+function buildPdiDocxXml(){
+  const overall = computeLevel(mapaState.dims);
+  const softR = computeLevel(mapaState.dims, "soft");
+  const hardR = computeLevel(mapaState.dims, "hard");
+  const today = new Date().toLocaleDateString("pt-BR");
+  const nome = myName || "Product Designer";
+
+  const paras = [];
+  paras.push(docxP("Plano de Desenvolvimento Individual (PDI)", {bold:true, size:34, color:"440099", spacingAfter:80}));
+  paras.push(docxP(`${nome}  ·  Product Design  ·  Matera  ·  ${today}`, {color:"6A6A6A", size:18, spacingAfter:280}));
+
+  paras.push(docxP("Diagnóstico", {bold:true, size:26, color:"440099", spacingAfter:100}));
+  paras.push(docxP(`Nível comportamental atual: ${softR ? LEVEL_LABEL[softR.level] : "avaliação incompleta"}`, {spacingAfter:40}));
+  paras.push(docxP(`Nível técnico atual: ${hardR ? LEVEL_LABEL[hardR.level] : "avaliação incompleta"}`, {spacingAfter:40}));
+  paras.push(docxP(`Nível predominante: ${overall ? LEVEL_LABEL[overall.level] : "avaliação incompleta"}`, {spacingAfter:40}));
+  paras.push(docxP(`Próximo nível almejado: ${mapaState.nextLevel ? LEVEL_LABEL[mapaState.nextLevel] : "não definido ainda"}`, {spacingAfter:280}));
+
+  paras.push(docxP("Evidências do nível atual", {bold:true, size:26, color:"440099", spacingAfter:100}));
+  if(mapaState.evidences.length===0){
+    paras.push(docxP("Nenhuma evidência registrada ainda.", {italic:true, color:"6A6A6A", spacingAfter:280}));
+  }else{
+    mapaState.evidences.forEach((e,i)=>{
+      const last = i===mapaState.evidences.length-1;
+      paras.push(docxP(e, {bullet:true, spacingAfter: last?280:60}));
+    });
+  }
+
+  paras.push(docxP("Prioridades de desenvolvimento", {bold:true, size:26, color:"440099", spacingAfter:100}));
+  if(mapaState.gaps.length===0){
+    paras.push(docxP("Nenhuma prioridade definida ainda.", {italic:true, color:"6A6A6A", spacingAfter:280}));
+  }else{
+    mapaState.gaps.forEach((g,i)=>{
+      const item = (typeof g === "string") ? {gap:g, action:"", deadline:""} : g;
+      paras.push(docxP(`${i+1}. ${item.gap}`, {bold:true, spacingAfter:40}));
+      paras.push(docxP(`Como desenvolver: ${item.action || "a definir com o gestor"}`, {color:"6A6A6A", spacingAfter:40}));
+      paras.push(docxP(`Prazo: ${item.deadline || "a definir com o gestor"}`, {color:"6A6A6A", spacingAfter:200}));
+    });
+  }
+
+  paras.push(docxP("Gerado automaticamente pelo Framework de Carreira · Product Design · Matera. Use este documento para oficializar seu PDI na Qulture Rocks.", {italic:true, size:16, color:"6A6A6A"}));
+
+  return `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+  <w:body>
+    ${paras.join("\n    ")}
+    <w:sectPr>
+      <w:pgSz w:w="11906" w:h="16838"/>
+      <w:pgMar w:top="1134" w:right="1134" w:bottom="1134" w:left="1134"/>
+    </w:sectPr>
+  </w:body>
+</w:document>`;
+}
+function buildPdiDocxBytes(){
+  const contentTypes = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">
+  <Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/>
+  <Default Extension="xml" ContentType="application/xml"/>
+  <Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/>
+</Types>`;
+  const rootRels = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
+  <Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/>
+</Relationships>`;
+  const documentXml = buildPdiDocxXml();
+  return buildZip([
+    {name:"[Content_Types].xml", text: contentTypes},
+    {name:"_rels/.rels", text: rootRels},
+    {name:"word/document.xml", text: documentXml},
+  ]);
+}
+async function downloadPdiDocx(){
+  const statusEl = document.getElementById("pdiStatus");
+  const setStatus = (text, cls)=>{ if(statusEl){ statusEl.textContent = text; statusEl.className = "status-line" + (cls?(" "+cls):""); } };
+  setStatus("Preparando o arquivo…");
+  const bytes = buildPdiDocxBytes();
+  const blob = new Blob([bytes], {type:"application/vnd.openxmlformats-officedocument.wordprocessingml.document"});
+  const safeName = (myName || "product-design").normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-zA-Z0-9]+/g,"-").replace(/^-+|-+$/g,"");
+  const filename = `PDI-${safeName}.docx`;
+
+  if(claudeDownloads){
+    try{
+      const result = await claudeDownloads.save({filename, data: blob});
+      setStatus(result.status==="saved" ? "PDI baixado — já pode anexar na Qulture Rocks." : "Arquivo enviado.", "ok");
+    }catch(e){
+      const code = e && e.code;
+      if(code==="declined"){ setStatus("Download cancelado."); }
+      else if(code==="rate_limited"){ setStatus("Muitos pedidos seguidos — tente de novo em instantes.", "err"); }
+      else{ setStatus("Não foi possível gerar o arquivo agora.", "err"); }
+    }
+    return;
+  }
+
+  // fora do claude.ai: download padrão do navegador
+  try{
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url; a.download = filename;
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(()=>URL.revokeObjectURL(url), 4000);
+    setStatus("PDI baixado — já pode anexar na Qulture Rocks.", "ok");
+  }catch(e){
+    setStatus("Não foi possível gerar o arquivo agora.", "err");
+  }
+}
+
+/* ============================================================
+   TABS
+   ============================================================ */
+function wireTabs(){
+  document.querySelectorAll(".tab-btn").forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+      document.querySelectorAll(".tab-btn").forEach(b=>b.classList.remove("active"));
+      document.querySelectorAll(".panel").forEach(p=>p.classList.remove("active"));
+      btn.classList.add("active");
+      document.getElementById("panel-"+btn.dataset.tab).classList.add("active");
+      window.scrollTo({top:0, behavior:"smooth"});
+    });
+  });
+}
+
+/* CTA do banner: leva direto para "Meu mapa" e já desce a página até
+   lá, em vez de deixar a pessoa descobrir sozinha que precisa clicar
+   na aba — o "processo de como usar" vira uma única ação. */
+function wireHeroCta(){
+  const btn = document.getElementById("heroCtaBtn");
+  if(!btn) return;
+  btn.addEventListener("click", ()=>{
+    document.querySelectorAll(".tab-btn").forEach(b=>b.classList.remove("active"));
+    document.querySelectorAll(".panel").forEach(p=>p.classList.remove("active"));
+    const tabBtn = document.querySelector('.tab-btn[data-tab="meumapa"]');
+    const panel = document.getElementById("panel-meumapa");
+    if(tabBtn) tabBtn.classList.add("active");
+    if(panel){
+      panel.classList.add("active");
+      panel.scrollIntoView({behavior:"smooth", block:"start"});
+    }
+  });
+}
+
+/* ============================================================
+   CLAUDE RUNTIME: db + user capabilities
+   ============================================================ */
+let claudeUser = null, claudeDb = null, claudeDownloads = null, myId = null, myName = "", canEdit = false;
+
+async function initClaude(){
+  try{
+    claudeUser = (window.claude && window.claude.use) ? await window.claude.use("user") : null;
+  }catch(e){ claudeUser = null; }
+  try{
+    claudeDb = (window.claude && window.claude.use) ? await window.claude.use("db") : null;
+  }catch(e){ claudeDb = null; }
+  try{
+    claudeDownloads = (window.claude && window.claude.use) ? await window.claude.use("downloads") : null;
+  }catch(e){ claudeDownloads = null; }
+
+  if(claudeUser){
+    try{
+      const me = await claudeUser.me();
+      myId = me.id;
+      myName = me.name || "";
+      canEdit = !!me.canEdit;
+    }catch(e){}
+  }
+
+  if(!myId || !claudeDb){
+    const local = loadFromLocalStorage();
+    if(local){
+      mapaState.dims = local.dims || {};
+      mapaState.nextLevel = local.nextLevel || "";
+      mapaState.evidences = local.evidences || [];
+      mapaState.gaps = (local.gaps || []).map(g =>
+        (typeof g === "string") ? {gap:g, action:"", deadline:""} : g
+      );
+      if(local.updatedAt){
+        const el = document.getElementById("lastMineUpdate");
+        if(el) el.textContent = "Meu mapa · última atualização: " + new Date(local.updatedAt).toLocaleDateString("pt-BR");
+      }
+    }
+    startMeuMapaView();
+  }
+
+  // The management view only ever enters the page for people who can
+  // edit this artifact — it is built here, not left sitting hidden in
+  // the markup for everyone else.
+  if(canEdit){
+    mountManagementUI();
+  }
+
+  if(myId && claudeDb){
+    loadMyAssessment();
+  }
+}
+
+/* ---------- Meu mapa: load / save ---------- */
+const LOCAL_KEY = "matera_framework_meu_mapa_v1";
+function loadFromLocalStorage(){
+  try{
+    const raw = localStorage.getItem(LOCAL_KEY);
+    return raw ? JSON.parse(raw) : null;
+  }catch(e){ return null; }
+}
+function saveToLocalStorage(data){
+  try{ localStorage.setItem(LOCAL_KEY, JSON.stringify(data)); return true; }
+  catch(e){ return false; }
+}
+
+function loadMyAssessment(){
+  try{
+    claudeDb.doc("assessments/"+myId).onSnapshot((snap)=>{
+      const data = snap.exists ? snap.data : {};
+      mapaState.dims = data.dims || {};
+      mapaState.nextLevel = data.nextLevel || "";
+      mapaState.evidences = data.evidences || [];
+      mapaState.gaps = (data.gaps || []).map(g =>
+        (typeof g === "string") ? {gap:g, action:"", deadline:""} : g
+      );
+      if(data.updatedAt){
+        document.getElementById("lastMineUpdate").textContent =
+          "Meu mapa · última atualização: " + new Date(data.updatedAt).toLocaleDateString("pt-BR");
+      }
+      startMeuMapaView();
+    }, (err)=>{ console.warn("assessment load error", err); startMeuMapaView(); });
+  }catch(e){ console.warn(e); startMeuMapaView(); }
+}
+
+async function persistAssessment(showStatus){
+  const statusEl = document.getElementById("mapaStatus");
+  if(!myId || !claudeDb){
+    const ok = saveToLocalStorage({
+      dims: mapaState.dims,
+      nextLevel: mapaState.nextLevel,
+      evidences: mapaState.evidences,
+      gaps: mapaState.gaps,
+      updatedAt: Date.now(),
+    });
+    if(showStatus && statusEl){
+      statusEl.textContent = ok ? "Salvo neste navegador." : "Não foi possível salvar neste navegador.";
+      statusEl.className = "status-line" + (ok ? " ok" : " err");
+    }
+    return;
+  }
+  if(showStatus && statusEl){ statusEl.textContent = "Salvando…"; statusEl.className = "status-line"; }
+  try{
+    await claudeDb.doc("assessments/"+myId).set({
+      dims: mapaState.dims,
+      nextLevel: mapaState.nextLevel,
+      evidences: mapaState.evidences,
+      gaps: mapaState.gaps,
+      updatedAt: Date.now(),
+    });
+    if(showStatus && statusEl){ statusEl.textContent = "Salvo."; statusEl.className = "status-line ok"; }
+  }catch(e){
+    if(showStatus && statusEl){ statusEl.textContent = "Não foi possível salvar agora. Tente novamente."; statusEl.className = "status-line err"; }
+  }
+}
+
+/* ============================================================
+   PAINEL DE GESTÃO — construído inteiramente em runtime.
+   Não existe no HTML enviado a quem não pode editar o artifact;
+   a aba, o painel e o modal de notas só são criados aqui, e só
+   quando user.canEdit() confirma a permissão. Os dados, de todo
+   modo, já ficam bloqueados por regra no banco (db rules) —
+   esta camada é a segunda garantia, na experiência visível.
+   ============================================================ */
+function mountManagementUI(){
+  const mount = document.getElementById("managementMount");
+  mount.innerHTML = `
+    <div class="overlay" id="notesOverlay">
+      <div class="modal">
+        <button class="modal-close" id="closeNotesBtn">&times;</button>
+        <h3 id="notesModalName">Notas de acompanhamento</h3>
+        <p class="muted">Privado — visível apenas para quem edita este artifact.</p>
+        <div class="field-row">
+          <label class="field">Foco de desenvolvimento</label>
+          <textarea id="notesFoco" placeholder="Ex: Autonomia em discovery complexo."></textarea>
+        </div>
+        <div class="field-row">
+          <label class="field">Plano de ação / PDP</label>
+          <textarea id="notesPlano" placeholder="Passos acordados, prazos, checkpoints."></textarea>
+        </div>
+        <div class="grid2">
+          <div class="field-row">
+            <label class="field">Status</label>
+            <select id="notesStatus">
+              <option value="acompanhamento">Acompanhamento normal</option>
+              <option value="observacao">Em observação</option>
+              <option value="plano_formal">Plano formal em curso</option>
+            </select>
+          </div>
+          <div class="field-row">
+            <label class="field">Próxima revisão</label>
+            <input type="date" id="notesRevisao">
+          </div>
+        </div>
+        <div class="field-row">
+          <label class="field">Notas privadas</label>
+          <textarea id="notesPrivadas" placeholder="Contexto adicional, apenas para gestão."></textarea>
+        </div>
+        <div style="display:flex;align-items:center;gap:14px;">
+          <button class="btn" id="saveNotesBtn">Salvar notas</button>
+          <span class="status-line" id="notesStatusLine"></span>
+        </div>
+      </div>
+    </div>
+  `;
+
+  const tabBtn = document.createElement("button");
+  tabBtn.className = "tab-btn";
+  tabBtn.dataset.tab = "gestao";
+  tabBtn.textContent = "Painel de gestão";
+  document.querySelector(".tabs").appendChild(tabBtn);
+  tabBtn.addEventListener("click", ()=>{
+    document.querySelectorAll(".tab-btn").forEach(b=>b.classList.remove("active"));
+    document.querySelectorAll(".panel").forEach(p=>p.classList.remove("active"));
+    tabBtn.classList.add("active");
+    document.getElementById("panel-gestao").classList.add("active");
+  });
+
+  const panel = document.createElement("div");
+  panel.className = "panel";
+  panel.id = "panel-gestao";
+  panel.innerHTML = `
+    <h2 class="section-title">Painel de gestão</h2>
+    <p class="section-lede">Visão consolidada dos mapas de carreira do time, com um único modelo de cálculo por trás — a mesma régua que cada pessoa vê na própria aba "Meu mapa". As notas de acompanhamento abaixo são privadas.</p>
+    <div class="card">
+      <h3>Distribuição do time</h3>
+      <div id="distroContainer"><p class="empty">Carregando…</p></div>
+    </div>
+    <div class="card">
+      <h3>Time — mapas consolidados</h3>
+      <div id="teamTableContainer"><p class="empty">Carregando…</p></div>
+    </div>
+  `;
+  document.querySelector(".wrap").insertBefore(panel, document.querySelector(".wrap footer"));
+
+  document.getElementById("closeNotesBtn").addEventListener("click", ()=>{
+    document.getElementById("notesOverlay").classList.remove("open");
+  });
+  document.getElementById("notesOverlay").addEventListener("click", (e)=>{
+    if(e.target.id==="notesOverlay") document.getElementById("notesOverlay").classList.remove("open");
+  });
+  document.getElementById("saveNotesBtn").addEventListener("click", async ()=>{
+    const statusEl = document.getElementById("notesStatusLine");
+    if(!currentNotesId || !claudeDb){ return; }
+    statusEl.textContent = "Salvando…";
+    statusEl.className = "status-line";
+    try{
+      await claudeDb.doc("manager_notes/"+currentNotesId).set({
+        foco: document.getElementById("notesFoco").value,
+        plano: document.getElementById("notesPlano").value,
+        status: document.getElementById("notesStatus").value,
+        revisao: document.getElementById("notesRevisao").value,
+        privadas: document.getElementById("notesPrivadas").value,
+        updatedAt: Date.now(),
+      });
+      statusEl.textContent = "Salvo.";
+      statusEl.className = "status-line ok";
+    }catch(e){
+      statusEl.textContent = "Não foi possível salvar agora.";
+      statusEl.className = "status-line err";
+    }
+  });
+
+  loadTeamPanel();
+}
+
+async function loadTeamPanel(){
+  const distroBox = document.getElementById("distroContainer");
+  const box = document.getElementById("teamTableContainer");
+  try{
+    const snap = await claudeDb.collection("assessments").get();
+    const docs = snap.docs || [];
+    if(docs.length===0){
+      distroBox.innerHTML = `<p class="empty">Ninguém preencheu o mapa ainda.</p>`;
+      box.innerHTML = `<p class="empty">Nenhum mapa de carreira preenchido ainda.</p>`;
+      return;
+    }
+    const ids = docs.map(d=>d.id);
+    let profiles = {};
+    if(claudeUser){
+      try{ profiles = await claudeUser.profiles(ids); }catch(e){}
+    }
+    const now = Date.now();
+    const distro = {PD1:0,PD2:0,PD3:0,PD4:0};
+    let emAndamento = 0;
+    const rows = docs.map(d=>{
+      const data = d.data || {};
+      const name = (profiles[d.id] && profiles[d.id].name) || ("Designer " + d.id.slice(-4));
+      const stale = data.updatedAt ? (now - data.updatedAt) > (1000*60*60*24*180) : true;
+      const result = computeLevel(data.dims || {});
+      if(result){ distro[result.level]++; } else { emAndamento++; }
+      const next = data.nextLevel || "—";
+      const evCount = (data.evidences||[]).length;
+      const updated = data.updatedAt ? new Date(data.updatedAt).toLocaleDateString("pt-BR") : "nunca";
+      return {id:d.id, name, level:result?result.level:null, next, evCount, updated, stale};
+    });
+    rows.sort((a,b)=>a.name.localeCompare(b.name));
+
+    distroBox.innerHTML = `
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        ${LEVELS.map(lv=>`<span class="badge l${lv.slice(-1)}" style="font-size:12px;padding:6px 12px;">${lv} · ${distro[lv]}</span>`).join("")}
+        ${emAndamento>0 ? `<span class="badge stale" style="font-size:12px;padding:6px 12px;">${emAndamento} em andamento</span>` : ""}
+      </div>`;
+
+    box.innerHTML = `
+      <div style="overflow-x:auto;">
+      <table class="mtable">
+        <tr><th>Designer</th><th>Nível atual</th><th>Próximo</th><th>Evidências</th><th>Atualizado</th><th></th></tr>
+        ${rows.map(r=>`
+          <tr>
+            <td class="name-cell"></td>
+            <td>${r.level ? `<span class="badge l${r.level.slice(-1)}">${r.level}</span>` : `<span class="muted">em andamento</span>`}</td>
+            <td class="muted">${r.next!=="—" ? r.next : "—"}</td>
+            <td>${r.evCount}</td>
+            <td>${r.stale ? `<span class="badge stale">desatualizado</span>` : `<span class="muted">${r.updated}</span>`}</td>
+            <td><button class="btn secondary" data-open-notes="${r.id}">Notas</button></td>
+          </tr>
+        `).join("")}
+      </table>
+      </div>`;
+
+    box.querySelectorAll("tr").forEach((tr, idx)=>{
+      if(idx===0) return;
+      const r = rows[idx-1];
+      tr.querySelector(".name-cell").textContent = r.name;
+      const btn = tr.querySelector("[data-open-notes]");
+      if(btn){ btn.addEventListener("click", ()=>openNotes(r.id, r.name)); }
+    });
+  }catch(e){
+    box.innerHTML = `<p class="empty">Não foi possível carregar o painel agora.</p>`;
+  }
+}
+
+let currentNotesId = null;
+async function openNotes(id, name){
+  currentNotesId = id;
+  document.getElementById("notesModalName").textContent = "Notas de acompanhamento — " + name;
+  document.getElementById("notesFoco").value = "";
+  document.getElementById("notesPlano").value = "";
+  document.getElementById("notesStatus").value = "acompanhamento";
+  document.getElementById("notesRevisao").value = "";
+  document.getElementById("notesPrivadas").value = "";
+  document.getElementById("notesStatusLine").textContent = "";
+  try{
+    claudeDb.doc("manager_notes/"+id).onSnapshot((snap)=>{
+      if(snap.exists){
+        const d = snap.data;
+        document.getElementById("notesFoco").value = d.foco || "";
+        document.getElementById("notesPlano").value = d.plano || "";
+        document.getElementById("notesStatus").value = d.status || "acompanhamento";
+        document.getElementById("notesRevisao").value = d.revisao || "";
+        document.getElementById("notesPrivadas").value = d.privadas || "";
+      }
+    }, ()=>{});
+  }catch(e){}
+  document.getElementById("notesOverlay").classList.add("open");
+}
+
+/* ============================================================
+   INIT
+   ============================================================ */
+renderSignals();
+renderMatrix();
+document.getElementById("selAlertLevel").addEventListener("change",(e)=>{
+  renderAlertViewer(e.target.value);
+});
+wireTabs();
+wireHeroCta();
+initClaude();
+</script>
+</body>
+</html>
